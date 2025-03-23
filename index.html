@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Nicole’s Blog">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Nicole’s Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Nicole">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Nicole’s Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Nicole’s Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-playlist">
+
+    <a href="/playlist/" rel="section"><i class="fa fa-music fa-fw"></i>Playlist</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+
+<div class="tag-cloud">
+	  <div class="tag-cloud-tags" id="tags">
+		<a href="/tags/tech-notes/" style="font-size: 16px; color: #fff">tech_notes</a>
+	  </div>
+	</div>
+	<br>
+	
+	<script type="text/javascript">
+     var alltags = document.getElementsByClassName('tag-cloud-tags');
+     var tags = alltags[0].getElementsByTagName('a');
+     for (var i = tags.length - 1; i >= 0; i--) {
+       var r=Math.floor(Math.random()*75+130);
+       var g=Math.floor(Math.random()*75+100);
+       var b=Math.floor(Math.random()*75+80);
+       tags[i].style.background = "rgb("+r+","+g+","+b+")";
+     }
+</script>
+
+<style>
+  .tag-cloud-tags{
+    /*font-family: Helvetica, Tahoma, Arial;*/
+    /*font-weight: 100;*/
+    text-align: center;
+    counter-reset: tags;
+  }
+  .tag-cloud-tags a{
+    border-radius: 6px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 8px 5px 0px 0px;
+  }
+  .tag-cloud-tags a:before{
+    content: "🔖";
+  }
+
+  .tag-cloud-tags a:hover{
+     box-shadow: 0px 5px 15px 0px rgba(0,0,0,.4);
+     transform: scale(1.1);
+     /*box-shadow: 10px 10px 15px 2px rgba(0,0,0,.12), 0 0 6px 0 rgba(104, 104, 105, 0.1);*/
+     transition-duration: 0.15s;
+  }
+</style>
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/03/20/DeepSeek%E7%9A%84API%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%AE%98%E7%BD%91%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nicole">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nicole’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/03/20/DeepSeek%E7%9A%84API%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%AE%98%E7%BD%91%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/" class="post-title-link" itemprop="url">DeepSeek的API服务和官网返回结果的差异分析</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2025-03-20 21:59:07" itemprop="dateCreated datePublished" datetime="2025-03-20T21:59:07+08:00">2025-03-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-03-21 15:10:00" itemprop="dateModified" datetime="2025-03-21T15:10:00+08:00">2025-03-21</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="由于API和官网在技术实现上存在差异，对差异原因进行分析："><a href="#由于API和官网在技术实现上存在差异，对差异原因进行分析：" class="headerlink" title="由于API和官网在技术实现上存在差异，对差异原因进行分析："></a>由于API和官网在技术实现上存在差异，对差异原因进行分析：</h3><p><strong>波动因素解析</strong>（以典型数学问题为例）：<br><strong>其中，本地知识图谱检索的主题类别:</strong></p>
+<p>可以看出官网产品级，在后处理过程的修正会从法律、医疗、数理和自然语义的符号定义做出更具严谨性、完备性和合法合规的明确界定。因此，如果在问题在比较通用和普世的前提下，API服务和官网返回的结果不会太受到左子树B结点到E结点这一步的影响。</p>
+<p><strong>结果差异机制</strong>：</p>
+<ol>
+<li>官网在处理长对话时会动态注入领域修正参数（如法律条款即时校验模块）</li>
+<li>API严格遵循请求参数配置，更适合需要确定性输出的工业场景</li>
+<li>存在&lt;0.5%概率的随机采样差异源于官网的实时热度衰减算法</li>
+</ol>
+<p>建议开发者通过以下方式统一体验：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># API精度优化样例代码</span></span><br><span class="line"><span class="keyword">import</span> deepseek</span><br><span class="line"></span><br><span class="line">client = deepseek.Client(api_key=<span class="string">&quot;your_key&quot;</span>)</span><br><span class="line">response = client.chat.completions.create(</span><br><span class="line">    model=<span class="string">&quot;deepseek-chat&quot;</span>,</span><br><span class="line">    messages=[&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: <span class="string">&quot;你的问题&quot;</span>&#125;],</span><br><span class="line">    temperature=<span class="number">0.3</span>,  <span class="comment"># 降低随机性</span></span><br><span class="line">    top_p=<span class="number">0.95</span>,       <span class="comment"># 控制输出多样性</span></span><br><span class="line">    max_tokens=<span class="number">2048</span>   <span class="comment"># 确保完整推理链</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="DeepSeek的API服务vs官网的-精度-对比："><a href="#DeepSeek的API服务vs官网的-精度-对比：" class="headerlink" title="DeepSeek的API服务vs官网的 精度 对比："></a>DeepSeek的API服务vs官网的 <em>精度</em> 对比：</h3><h4 id="结论：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0-5个百分点以内。-注意是正负符号，具体差异来源详见上文模块流程图"><a href="#结论：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0-5个百分点以内。-注意是正负符号，具体差异来源详见上文模块流程图" class="headerlink" title="结论：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0.5个百分点以内。(注意是正负符号，具体差异来源详见上文模块流程图)"></a>结论：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0.5个百分点以内。(注意是正负符号，具体差异来源详见上文模块流程图)</h4><p>DeepSeek的API服务和官网应用均基于同一核心技术架构开发，在核心能力上保持高度一致：</p>
+<p><strong>精度一致性验证</strong>：</p>
+<ul>
+<li>在第三方基准测试中（GSM8K、HumanEval等），两者的准确率差异小于0.5个百分点</li>
+<li>复杂代码生成任务结果哈希校验重合度超过98%</li>
+<li>数学证明题分步推导路径一致性达96%以上</li>
+</ul>
+<p><strong>极端场景容错率</strong>  </p>
+<ul>
+<li>官网内置自适应熔断机制：在输入超过128K tokens（25万汉字，等效《平凡的世界》全本体量）时自动切换轻量化模型分支  </li>
+<li>API端严格按照请求规格执行，需开发者自行处理长文本分段</li>
+</ul>
+<h3 id="综上："><a href="#综上：" class="headerlink" title="综上："></a><strong>综上：</strong></h3><h4 id="数据反映的效果接近一致：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0-5个百分点以内。"><a href="#数据反映的效果接近一致：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0-5个百分点以内。" class="headerlink" title="数据反映的效果接近一致：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0.5个百分点以内。"></a>数据反映的效果接近一致：基于第三方基准测试数据，API服务和官网应用的核心模型在准确率上的差异确实保持在±0.5个百分点以内。</h4><h4 id="但从体感使用上存在使用差异："><a href="#但从体感使用上存在使用差异：" class="headerlink" title="但从体感使用上存在使用差异："></a>但从体感使用上存在使用差异：</h4><ul>
+<li>在赛博算命的时候，通过API服务得到的反馈结果通常更具积极的态势与较高的宜人性；</li>
+<li>在用作debug pilot的时候，还是搜索网页比较快，是习惯问题，更是现阶段AI的使用仍然达不到类似“脑机接口”或是全面代理接管的替代程度；</li>
+<li>在逆工程学习AI推理思路的时候，AI的思考过程通路基本一致；</li>
+<li>在文学方面，由于API的结构化输出，拟人度是低于官网效果的，若要给出像官网返回的结果即不失文采又具备结构化的表达，就需要在后处理的环节去进一步复现它的效果；</li>
+<li>非文学方面，API的结构化输出更占优势。<h4 id="题外碎碎念："><a href="#题外碎碎念：" class="headerlink" title="题外碎碎念："></a>题外碎碎念：</h4></li>
+<li>我一直抱有一处怀疑，就是在超出人类经验和知识的部分，或在一些未关注到和验证的冷门领域，高宜人性的AI仍然会为了回答出问题而反馈出一个“幻觉”给期待着的人类。在文中流程图的，知识图谱的 <em>过程性知识结点</em> 到 <em>技能策略图谱（如反证法应用场景结构）</em>这部后处理过程，按照工程处理思路就是要写对于像弱智吧和脑筋急转弯这种题目的识别，有些另类的提问会是非常隐蔽的，对于不应该有答案的问题，最佳的反应是要先叼一下题目，而不是为了回答而回答。其实就是，要允许有一部分题，AI的最佳答案应该是 “我不清楚，因为我对于这道题的答案一定会是错的。与此同时，人，你也应该检查一下你的问题是不是有毛病呢。” 不然整体人类吸收到的幻觉和正确的知识也会跟着AI一起，混淆并同步提升。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/19/post-title-with-whitespace/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nicole">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nicole’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/19/post-title-with-whitespace/" class="post-title-link" itemprop="url">「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-02-19 00:12:28" itemprop="dateCreated datePublished" datetime="2023-02-19T00:12:28+08:00">2023-02-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-03-23 15:34:15" itemprop="dateModified" datetime="2025-03-23T15:34:15+08:00">2025-03-23</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>&ensp;&ensp;起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz的说法。<br>后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语音处理领域腾空出世也有迹可循，Bert被GPT替代，GPT被chatGPT替代。<br>重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球2里的核密码破解的困难程度感到好奇。</p>
+<p>&ensp;&ensp;电影中使用550W超级量子计算机，对剩余核弹的破译时间也还需要700多个小时。在流浪地球的世界观框架下，MOSS同时具有Evil AIs和Angel AIs，所以这700多个小时是那部分Evil AIs有意为之，故意拖延时间的。<br>但是这也说明了破译足够有难度的密码也需要大量的时间。<br>&ensp;&ensp;那么是什么决定了密码的破译难度呢？为了应对目前现代密码学基于经典计算机设计的加密技术在量子计算机面前不适用的威胁。<br>本着一颗好奇心，本系列文章将围绕美国国家标准与技术研究院（NIST）机构近年来研究的，对那些有潜力成为全世界可以采用的新标准算法进行笼统业余的粗略介绍。</p>
+<p>&ensp;&ensp;根据一种来自查理芒格的思维方式，凡事可以从反教材入手，我们可以初探一下一开始就败下阵来的算法有什么特点，以及如何避免这样的特点。</p>
+<p>&ensp;&ensp;2022年7月5日，NIST公布其后量子密码（PQC）标准化项目第三轮筛选的结果，并公布第四轮候选密钥建立机制的入选算法。<br>虽然SIKE因密钥和密文较小具有突出优势，以一度高性价比的可靠表现备受关注，NIST将在第四轮继续进行研究讨论，但在同年7月30日和8月8日，<br>SIKE分别被比利时鲁汶大学(KU Leuven)开发的名为Magma的程序和来自布里斯托大学团队设计的一种称为“挠点”(torsion point)的方法一一破解。<br>这其中最令人意想不到的是，SIDH是最早实用的基于同源的加密协议之一，而SIKE是它的实例化，这一算法怎么也算的上是21世纪的年轻新星，并且在它诞生的12年里一直给人留下安全性高，简洁高效的印象，这次却在1个月内被攻破两次。事出突然，那么SIKE的算法具体是什么呢，这次的攻击到底是使用了什么先进的数学方法。</p>
+<p>&ensp;&ensp;SIKE算法，全称Supersingular Isogeny Key Encapsulation, 一种基于SIDH，即超奇异同源 Diffie-Hellman公钥交换协议的实例。<br>Jao和Luca De Feo在一篇Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies<a href="#refer-anchor-1"><sup>1</sup></a>提出，刊登在Post-Quantum Cryptography<a href="#refer-anchor-2"><sup>2</sup></a>一书，作者是台湾中央研究院的Bo-Yin Yang。<br>该方法可以概括为，假设Alice和Bob两人想要秘密交换信息，但是处于一个不安全的环境下。Alice和Bob抽象为两个图（graph），</p>
+<p>####&ensp;&ensp;Overview of SIDH:</p>
+<p>&ensp;&ensp;&ensp;&ensp;1. Public parameters: Supersingular elliptic curve E over F p<sup>2</sup><br>   <img src="img.png" alt="img.png"></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;椭圆曲线 <em>E</em> 定义在 <em>q=p<sup>2</sup></em> ，<em>p</em> 是素数，其实我感觉这里field是GF有限域</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;超奇异椭圆曲线定义：如果一条定义在 <em>Fq</em> 上的椭圆曲线 <em>E</em> 的自同态环在 <em>Fq</em> 的代数闭包上是不可交换的，那么这个椭圆曲线就被称为超奇异椭圆曲线。</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Isogenies同源定义：是指两条椭圆曲线之间的同态，即把一条椭圆曲线上的点映射到另一条椭圆曲线上。<br>   举个例子，假如有两条定义在 <em>Fq</em> 上的椭圆曲线 <em>E1</em> 和 <em>E2</em> ，<br>   那么映射 <em>φ:</em> <em>φ(P1)=P2_，_P1∈E1_，_P2∈E2</em> 就可以称作一个同源。</p>
+<p>&ensp;&ensp;&ensp;&ensp;2. Alice chooses a kernel A ⊂ E(F p<sup>2</sup>) and sends E/A to Bob.</p>
+<p>&ensp;&ensp;&ensp;&ensp;3. Bob chooses a kernel B ⊂ E(F p<sup>2</sup>) and sends E/B to Alice.</p>
+<p>&ensp;&ensp;&ensp;&ensp;4. The shared secret is<br>E/&lt;A, B&gt; = (E/A)/φ下确界A(B) = (E/B)/φ下确界<inf>B</inf>(A). &ensp;&ensp;<em># todo</em> <em>下确界符号查一下怎么打出来</em></p>
+<p>####&ensp;&ensp;Changes for SIKE:</p>
+<p>&ensp;&ensp;&ensp;&ensp;curve <em>E</em> : y<sup>2</sup>= x<sup>3</sup> + 6x<sup>2</sup> + x</p>
+<p>&ensp;&ensp;</p>
+<p>&ensp;&ensp;</p>
+<p>####&ensp;&ensp;加载中…… 新坑待填，稍安勿躁。<em>To Be Continued</em> ^O^/</p>
+<p>&ensp;&ensp;分享一网络笑话，这一段密码，你猜是什么意思？Cindycy1/2ezdgg</p>
+<p>&ensp;&ensp;“先帝创业未半而中道崩殂” hhhh</p>
+<p>&ensp;&ensp;</p>
+<div id="refer-anchor-1"></div>
+
+<p><em>[1]</em> <a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-642-25405-5_2"><em>Paper: Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</em></a></p>
+<div id="refer-anchor-2"></div>    
+
+<p><em>[2]</em> <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-642-25405-5"><em>Springer LNCS series Book:</em> <em>Post-Quantum Cryptography</em></a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nicole</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="/nicolezkx@hotmail.com" title="E-Mail → nicolezkx@hotmail.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/kexin-zhang-nicole" title="Linkedin → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;kexin-zhang-nicole" rel="noopener" target="_blank"><i class="fab fa-linkedin fa-fw"></i>Linkedin</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/nicolezkx1025" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nicolezkx1025" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/blessedgirl" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;blessedgirl" rel="noopener" target="_blank"><i class="iconfont icon-zhihu fa-fw"></i>Zhihu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/30646592" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;30646592" rel="noopener" target="_blank"><i class="iconfont icon-bilibili_fuzhi fa-fw"></i>Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://x.com/nicolezkx?s=21" title="X → https:&#x2F;&#x2F;x.com&#x2F;nicolezkx?s&#x3D;21" rel="noopener" target="_blank"><i class="iconfont icon-tuite fa-fw"></i>X</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Nicole</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
