@@ -20,22 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":null,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
   </script>
 
-  <meta name="description" content="&amp;ensp;&amp;ensp;起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz的说法。后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语音处理领域腾空出世也有迹可循，Bert被GPT替代，GPT被chatGPT替代。重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球2">
+  <meta name="description" content="TurtleBot3 ROS package 的主要功能和核心组件：主要功能： TurtleBot3 是一个小型、低成本、可编程的移动机器人平台 它提供了完整的 ROS（机器人操作系统）集成支持 主要用于教育、研究和开发目的  核心功能包（Packages）： turtlebot3_node：核心功能节点，负责机器人的基本控制和状态管理       点击这里查看 turtlebot3_node 详">
 <meta property="og:type" content="article">
-<meta property="og:title" content="「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」">
-<meta property="og:url" content="http://example.com/2023/02/19/post-title-with-whitespace/index.html">
+<meta property="og:title" content="ROS系列项目 —— TurtleBot3 扩写版README">
+<meta property="og:url" content="http://example.com/2025/04/29/ROS%E7%B3%BB%E5%88%97%E9%A1%B9%E7%9B%AE%20%E2%80%94%E2%80%94%20TurtleBot3%20%E6%89%A9%E5%86%99%E7%89%88README/index.html">
 <meta property="og:site_name" content="Nicole’s Blog">
-<meta property="og:description" content="&amp;ensp;&amp;ensp;起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz的说法。后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语音处理领域腾空出世也有迹可循，Bert被GPT替代，GPT被chatGPT替代。重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球2">
+<meta property="og:description" content="TurtleBot3 ROS package 的主要功能和核心组件：主要功能： TurtleBot3 是一个小型、低成本、可编程的移动机器人平台 它提供了完整的 ROS（机器人操作系统）集成支持 主要用于教育、研究和开发目的  核心功能包（Packages）： turtlebot3_node：核心功能节点，负责机器人的基本控制和状态管理       点击这里查看 turtlebot3_node 详">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/2023/02/19/post-title-with-whitespace/img.png">
-<meta property="article:published_time" content="2023-02-18T16:12:28.000Z">
-<meta property="article:modified_time" content="2025-03-23T07:34:15.929Z">
+<meta property="article:published_time" content="2025-04-29T09:36:07.000Z">
+<meta property="article:modified_time" content="2025-04-29T09:37:19.251Z">
 <meta property="article:author" content="Nicole">
 <meta property="article:tag" content="tech_notes">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2023/02/19/post-title-with-whitespace/img.png">
 
-<link rel="canonical" href="http://example.com/2023/02/19/post-title-with-whitespace/">
+<link rel="canonical" href="http://example.com/2025/04/29/ROS%E7%B3%BB%E5%88%97%E9%A1%B9%E7%9B%AE%20%E2%80%94%E2%80%94%20TurtleBot3%20%E6%89%A9%E5%86%99%E7%89%88README/">
 
 
 <script id="page-configurations">
@@ -48,7 +46,7 @@
   };
 </script>
 
-  <title>「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」 | Nicole’s Blog</title>
+  <title>ROS系列项目 —— TurtleBot3 扩写版README | Nicole’s Blog</title>
   
 
 
@@ -201,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/19/post-title-with-whitespace/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/29/ROS%E7%B3%BB%E5%88%97%E9%A1%B9%E7%9B%AE%20%E2%80%94%E2%80%94%20TurtleBot3%20%E6%89%A9%E5%86%99%E7%89%88README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -214,7 +212,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」
+          ROS系列项目 —— TurtleBot3 扩写版README
         </h1>
 
         <div class="post-meta">
@@ -223,16 +221,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2023-02-19 00:12:28" itemprop="dateCreated datePublished" datetime="2023-02-19T00:12:28+08:00">2023-02-19</time>
+              <time title="Created: 2025-04-29 17:36:07 / Modified: 17:37:19" itemprop="dateCreated datePublished" datetime="2025-04-29T17:36:07+08:00">2025-04-29</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-03-23 15:34:15" itemprop="dateModified" datetime="2025-03-23T15:34:15+08:00">2025-03-23</time>
-              </span>
 
           
 
@@ -245,33 +237,215 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>&ensp;&ensp;起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz的说法。<br>后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语音处理领域腾空出世也有迹可循，Bert被GPT替代，GPT被chatGPT替代。<br>重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球2里的核密码破解的困难程度感到好奇。</p>
-<p>&ensp;&ensp;电影中使用550W超级量子计算机，对剩余核弹的破译时间也还需要700多个小时。在流浪地球的世界观框架下，MOSS同时具有Evil AIs和Angel AIs，所以这700多个小时是那部分Evil AIs有意为之，故意拖延时间的。<br>但是这也说明了破译足够有难度的密码也需要大量的时间。<br>&ensp;&ensp;那么是什么决定了密码的破译难度呢？为了应对目前现代密码学基于经典计算机设计的加密技术在量子计算机面前不适用的威胁。<br>本着一颗好奇心，本系列文章将围绕美国国家标准与技术研究院（NIST）机构近年来研究的，对那些有潜力成为全世界可以采用的新标准算法进行笼统业余的粗略介绍。</p>
-<p>&ensp;&ensp;根据一种来自查理芒格的思维方式，凡事可以从反教材入手，我们可以初探一下一开始就败下阵来的算法有什么特点，以及如何避免这样的特点。</p>
-<p>&ensp;&ensp;2022年7月5日，NIST公布其后量子密码（PQC）标准化项目第三轮筛选的结果，并公布第四轮候选密钥建立机制的入选算法。<br>虽然SIKE因密钥和密文较小具有突出优势，以一度高性价比的可靠表现备受关注，NIST将在第四轮继续进行研究讨论，但在同年7月30日和8月8日，<br>SIKE分别被比利时鲁汶大学(KU Leuven)开发的名为Magma的程序和来自布里斯托大学团队设计的一种称为“挠点”(torsion point)的方法一一破解。<br>这其中最令人意想不到的是，SIDH是最早实用的基于同源的加密协议之一，而SIKE是它的实例化，这一算法怎么也算的上是21世纪的年轻新星，并且在它诞生的12年里一直给人留下安全性高，简洁高效的印象，这次却在1个月内被攻破两次。事出突然，那么SIKE的算法具体是什么呢，这次的攻击到底是使用了什么先进的数学方法。</p>
-<p>&ensp;&ensp;SIKE算法，全称Supersingular Isogeny Key Encapsulation, 一种基于SIDH，即超奇异同源 Diffie-Hellman公钥交换协议的实例。<br>Jao和Luca De Feo在一篇Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies<a href="#refer-anchor-1"><sup>1</sup></a>提出，刊登在Post-Quantum Cryptography<a href="#refer-anchor-2"><sup>2</sup></a>一书，作者是台湾中央研究院的Bo-Yin Yang。<br>该方法可以概括为，假设Alice和Bob两人想要秘密交换信息，但是处于一个不安全的环境下。Alice和Bob抽象为两个图（graph），</p>
-<p>####&ensp;&ensp;Overview of SIDH:</p>
-<p>&ensp;&ensp;&ensp;&ensp;1. Public parameters: Supersingular elliptic curve E over F p<sup>2</sup><br>   <img src="img.png" alt="img.png"></p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;椭圆曲线 <em>E</em> 定义在 <em>q=p<sup>2</sup></em> ，<em>p</em> 是素数，其实我感觉这里field是GF有限域</p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;超奇异椭圆曲线定义：如果一条定义在 <em>Fq</em> 上的椭圆曲线 <em>E</em> 的自同态环在 <em>Fq</em> 的代数闭包上是不可交换的，那么这个椭圆曲线就被称为超奇异椭圆曲线。</p>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Isogenies同源定义：是指两条椭圆曲线之间的同态，即把一条椭圆曲线上的点映射到另一条椭圆曲线上。<br>   举个例子，假如有两条定义在 <em>Fq</em> 上的椭圆曲线 <em>E1</em> 和 <em>E2</em> ，<br>   那么映射 <em>φ:</em> <em>φ(P1)=P2_，_P1∈E1_，_P2∈E2</em> 就可以称作一个同源。</p>
-<p>&ensp;&ensp;&ensp;&ensp;2. Alice chooses a kernel A ⊂ E(F p<sup>2</sup>) and sends E/A to Bob.</p>
-<p>&ensp;&ensp;&ensp;&ensp;3. Bob chooses a kernel B ⊂ E(F p<sup>2</sup>) and sends E/B to Alice.</p>
-<p>&ensp;&ensp;&ensp;&ensp;4. The shared secret is<br>E/&lt;A, B&gt; = (E/A)/φ下确界A(B) = (E/B)/φ下确界<inf>B</inf>(A). &ensp;&ensp;<em># todo</em> <em>下确界符号查一下怎么打出来</em></p>
-<p>####&ensp;&ensp;Changes for SIKE:</p>
-<p>&ensp;&ensp;&ensp;&ensp;curve <em>E</em> : y<sup>2</sup>= x<sup>3</sup> + 6x<sup>2</sup> + x</p>
-<p>&ensp;&ensp;</p>
-<p>&ensp;&ensp;</p>
-<p>####&ensp;&ensp;加载中…… 新坑待填，稍安勿躁。<em>To Be Continued</em> ^O^/</p>
-<p>&ensp;&ensp;分享一网络笑话，这一段密码，你猜是什么意思？Cindycy1/2ezdgg</p>
-<p>&ensp;&ensp;“先帝创业未半而中道崩殂” hhhh</p>
-<p>&ensp;&ensp;</p>
-<div id="refer-anchor-1"></div>
+        <h1 id="TurtleBot3-ROS-package-的主要功能和核心组件："><a href="#TurtleBot3-ROS-package-的主要功能和核心组件：" class="headerlink" title="TurtleBot3 ROS package 的主要功能和核心组件："></a>TurtleBot3 ROS package 的<strong>主要功能</strong>和<strong>核心组件</strong>：</h1><h3 id="主要功能："><a href="#主要功能：" class="headerlink" title="主要功能："></a>主要功能：</h3><ol>
+<li>TurtleBot3 是一个小型、低成本、可编程的移动机器人平台</li>
+<li>它提供了完整的 ROS（机器人操作系统）集成支持</li>
+<li>主要用于教育、研究和开发目的</li>
+</ol>
+<h3 id="核心功能包（Packages）："><a href="#核心功能包（Packages）：" class="headerlink" title="核心功能包（Packages）："></a>核心功能包（Packages）：</h3><ol>
+<li><p><code>turtlebot3_node</code>：核心功能节点，负责机器人的基本控制和状态管理</p>
+ <details> 
+ <summary>
+ 点击这里查看 <i><b>turtlebot3_node</b></i> 详细信息</summary>
+ <br>
+ <i><b>turtlebot3_node</b></i> 的<b>主要功能</b>和<b>核心节点</b>：
+ 
+<p> <b>► 主要功能</b>：</p>
+<ol>
+<li>作为 TurtleBot3 机器人的核心控制节点</li>
+<li>负责与硬件（OpenCR 控制器）的通信</li>
+<li>实现机器人的基本运动控制和传感器数据处理</li>
+<li>提供里程计（Odometry）信息</li>
+<li>管理机器人的状态和配置</li>
+</ol>
+<p> <b>► 核心节点和组件</b>：</p>
+<ol>
+<li><p>主节点（TurtleBot3）：</p>
+<ul>
+<li>位于 <code>turtlebot3.cpp</code></li>
+<li>负责初始化机器人系统</li>
+<li>管理硬件通信</li>
+<li>处理传感器数据</li>
+<li>发布机器人状态信息</li>
+</ul>
+</li>
+<li><p>差速驱动控制器（DiffDriveController）：</p>
+<ul>
+<li>位于 <code>diff_drive_controller.cpp</code></li>
+<li>实现差速驱动控制</li>
+<li>处理速度命令</li>
+<li>计算轮子转速</li>
+</ul>
+</li>
+<li><p>里程计节点（Odometry）：</p>
+<ul>
+<li>位于 <code>odometry.cpp</code></li>
+<li>计算和发布机器人的位置和姿态信息</li>
+<li>基于编码器数据计算运动学信息</li>
+</ul>
+</li>
+<li><p>DYNAMIXEL SDK 封装：</p>
+<ul>
+<li>位于 <code>dynamixel_sdk_wrapper.cpp</code></li>
+<li>提供与 DYNAMIXEL 电机通信的接口</li>
+<li>处理电机控制和状态反馈</li>
+</ul>
+</li>
+<li><p>传感器处理：</p>
+<ul>
+<li>位于 <code>sensors/</code> 目录</li>
+<li>处理各种传感器数据（如 IMU、激光雷达等）</li>
+<li>提供传感器数据接口</li>
+</ul>
+</li>
+</ol>
+<p> <b>► 主要通信接口</b>：</p>
+<ol>
+<li><p>订阅：</p>
+<ul>
+<li>速度命令（cmd_vel）</li>
+<li>配置参数</li>
+<li>传感器数据</li>
+</ul>
+</li>
+<li><p>发布：</p>
+<ul>
+<li>里程计信息</li>
+<li>传感器数据</li>
+<li>机器人状态</li>
+<li>诊断信息</li>
+</ul>
+</li>
+</ol>
+<p> ► 这个节点是<b>整个 TurtleBot3 系统的核心</b>，它负责：</p>
+<ul>
+<li>与硬件层的通信</li>
+<li>运动控制</li>
+<li>传感器数据处理</li>
+<li>状态管理</li>
+<li>提供上层应用所需的各种接口</li>
+</ul>
+<p> ► 通过这个节点，上层应用可以方便地控制机器人，获取传感器数据，实现各种功能。<b>它是连接硬件和上层应用的桥梁，是整个系统的基础。</b></p>
+ </details>
+ <br></li>
+<li><p><code>turtlebot3_teleop</code>：远程遥控功能包，用于手动控制机器人</p>
+</li>
+<li><p><code>turtlebot3_navigation2</code>：导航功能包，实现自主导航功能</p>
+ <details> 
+ <summary>
+ 关于 <b> turtlebot3_cartographer、turtlebot3_navigation2 </b> 包，后面单开专题，写 <b> SLAM & 导航 </b> 相关的部分 ( <b>原理帖</b> 比较合适)。 
+ </summary>
+ <br>
+ 
+<p> 这个包是基于 ROS2 的 Navigation2 框架实现的，它提供了：</p>
+<pre><code> 1. 完整的导航功能
+ 2. 灵活的配置选项
+ 3. 可靠的行为控制
+ 4. 实时的路径规划
+ 5. 精确的定位能力
+</code></pre>
+<p> 使用这个包需要理解：</p>
+<pre><code> 1. Navigation2 框架
+ 2. 路径规划算法
+ 3. 定位算法
+ 4. 控制理论
+ 5. 传感器数据处理
+ 6. 行为树设计
+ 7. 参数调优
+</code></pre>
+<p> 这个包是 TurtleBot3 实现自主导航的核心组件，它能够：</p>
+<pre><code> ► 在已知环境中自主导航
+ ► 避开动态障碍物 
+ (重点标记，也是重点挖掘部分，但我要设计个反的，因为你逃它追，你插翅难飞.
+ 对了，说到飞，画个飞行器后视图吧.o0O0o。)
+ ► 实现精确的位姿控制
+ ► 提供实时的导航状态反馈
+</code></pre>
+ </details> 
+ <br></li>
+<li><p><code>turtlebot3_description</code>：机器人的 URDF 描述文件，定义机器人的物理特性和结构</p>
+ <details> 
+ <summary>
+ 点击这里查看 <i><b>turtlebot3_description</b></i> 详细信息
+ </summary>
+ 
+<pre><code> ► 主要功能：
 
-<p><em>[1]</em> <a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-642-25405-5_2"><em>Paper: Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</em></a></p>
-<div id="refer-anchor-2"></div>    
+     1. 提供机器人的物理描述：
+         - 几何形状
+         - 质量属性
+         - 关节定义
+         - 传感器位置
 
-<p><em>[2]</em> <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-642-25405-5"><em>Springer LNCS series Book:</em> <em>Post-Quantum Cryptography</em></a></p>
+     2. 支持三种型号：
+         - Burger：基础型号
+         - Waffle：标准型号
+         - Waffle Pi：带树莓派相机的型号
+
+     3. 可视化支持：
+         - 提供 3D 模型
+         - RViz 配置文件
+         - 材质和颜色定义
+
+     4. 仿真支持：
+         - 碰撞检测模型
+         - 惯性参数
+         - 运动学描述
+</code></pre>
+<p> 这个包是 TurtleBot3 的基础描述包，它定义了机器人的物理特性，但 <strong>不包含</strong>：</p>
+<pre><code> ► 控制逻辑        
+ ► 传感器驱动
+ ► 导航功能
+ ► 机械臂描述 
+ P.S, 关于 turtlebot3_manipulation 包，后面单开一篇，manipulation相关的部分，关系着机器人bf帮我拧瓶盖的美好幻觉（大雾
+
+ 这些功能都在 ► 其他专门的包 中实现。
+</code></pre>
+ </details> 
+ <br></li>
+<li><p><code>turtlebot3_bringup</code>：启动配置包，用于启动机器人的基本功能</p>
+</li>
+<li><p><code>turtlebot3_cartographer</code>：集成 Google Cartographer 的 SLAM（同时定位与地图构建）功能</p>
+ <details> 
+ <summary>
+ 点击这里查看 <i><b>turtlebot3_cartographer</b></i> 详细信息
+ </summary>
+ <i><b>turtlebot3_cartographer</b></i> 包中包含了以下 <i><b>SLAM（Simultaneous Localization and Mapping，同时定位与地图构建）</b></i> 相关的知识，它能够：
+
+<pre><code> 1. 实时构建环境地图
+ 2. 精确定位机器人位置
+ 3. 优化轨迹和位姿
+ 4. 处理传感器数据
+ 5. 提供实时地图更新
+</code></pre>
+<p> 这个包是基于 Google 的 Cartographer 算法实现的，它 <b>特别适合</b>：</p>
+<pre><code> - 室内环境建图
+ - 实时定位
+ - 大规模环境建图
+ - 多传感器融合
+</code></pre>
+<p> 使用这个包需要理解：</p>
+<pre><code> 1. SLAM 基本原理
+ 2. 传感器数据处理
+ 3. 坐标系转换
+ 4. 位姿图优化
+ 5. 实时系统设计
+ 
+</code></pre>
+<p> P.S, 关于 <b>turtlebot3_cartographer、turtlebot3_navigation2 </b> 包，后面单开专题，写 <b>SLAM &amp; 导航</b> 相关的部分。</p>
+ </details> 
+### 主要特点：</li>
+<li><p>支持多个 ROS 版本分支：noetic（ROS1）、humble、jazzy 和 rolling（ROS2）</p>
+</li>
+<li><p>提供完整的硬件驱动支持（如 DYNAMIXEL SDK、LDS 激光雷达驱动等）</p>
+</li>
+<li><p>包含丰富的应用示例和扩展功能（如自动驾驶、机械臂操作、机器学习等）</p>
+</li>
+<li><p>提供完整的文档支持和社区资源</p>
+</br>
+</br></li>
+</ol>
+<p><em>► 这个项目是一个非常完整的机器人平台，不仅提供了基础的移动机器人功能，还包括了大量的扩展应用，使其成为一个理想的教育和研究平台。每个功能包都有其特定的作用，共同构成了一个完整的机器人系统。</em></p>
 
     </div>
 
@@ -287,7 +461,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="http://example.com/2023/02/19/post-title-with-whitespace/" title="「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」">http://example.com/2023/02/19/post-title-with-whitespace/</a>
+    <a href="http://example.com/2025/04/29/ROS%E7%B3%BB%E5%88%97%E9%A1%B9%E7%9B%AE%20%E2%80%94%E2%80%94%20TurtleBot3%20%E6%89%A9%E5%86%99%E7%89%88README/" title="ROS系列项目 —— TurtleBot3 扩写版README">http://example.com/2025/04/29/ROS系列项目 —— TurtleBot3 扩写版README/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</a> unless stating additionally.
@@ -345,11 +519,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2025/03/20/DeepSeek%E7%9A%84API%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%AE%98%E7%BD%91%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/" rel="next" title="DeepSeek的API服务和官网返回结果的差异分析">
-      DeepSeek的API服务和官网返回结果的差异分析 <i class="fa fa-chevron-right"></i>
+    <a href="/2025/03/20/DeepSeek%E7%9A%84API%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%AE%98%E7%BD%91%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%9A%84%E5%B7%AE%E5%BC%82%E5%88%86%E6%9E%90/" rel="prev" title="DeepSeek的API服务和官网返回结果的差异分析">
+      <i class="fa fa-chevron-left"></i> DeepSeek的API服务和官网返回结果的差异分析
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -409,6 +583,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TurtleBot3-ROS-package-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E5%92%8C%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">TurtleBot3 ROS package 的主要功能和核心组件：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="nav-number">1.0.1.</span> <span class="nav-text">主要功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E5%8C%85%EF%BC%88Packages%EF%BC%89%EF%BC%9A"><span class="nav-number">1.0.2.</span> <span class="nav-text">核心功能包（Packages）：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -548,7 +723,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'nicolezkx1025.github.io',
       owner       : 'nicolezkx1025',
       admin       : ['nicolezkx1025'],
-      id          : 'bec81ab6648f5d8dd9f10342de2c9596',
+      id          : 'c1afaeb680eec4403721830fd24921d0',
         language: '',
       distractionFreeMode: true
     });
