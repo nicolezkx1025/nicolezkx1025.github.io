@@ -1384,7 +1384,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #28210d;
+  background: #ff1bfb;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2863,36 +2863,36 @@ h4,
 h5,
 h6 {
   font-family: 'Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  color: #000; /* 标题设置为纯黑色 */
+  color: #222; /* 恢复为之前的深灰色 */
 }
 .post-title {
-  color: #000 !important; /* 强制文章标题为黑色 */
+  color: #222 !important; /* 恢复文章标题颜色 */
 }
 .post-body {
-  color: #222; /* 加深正文颜色 */
+  color: #333; /* 恢复正文颜色 */
 }
 /* 针对其他可能较淡的文字进行加深 */
 .post-meta,
 .post-meta a {
-  color: #444 !important; /* 加深元数据颜色（日期等） */
+  color: #666 !important; /* 恢复元数据颜色 */
 }
 .sidebar {
-  color: #333; /* 加深侧边栏文字 */
+  color: #444; /* 恢复侧边栏文字 */
 }
 .site-title {
-  color: #000 !important;
-  font-size: 1.8em !important;
-  font-weight: 800 !important;
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 2px rgba(255,255,255,0.5); /* 轻微白色阴影，增强在背景上的可读性 */
-  transition: all 0.3s ease;
+  color: #fff !important; /* 标题文字通常在深色背景下用白色 */
+  font-size: 1.5em !important;
+  font-weight: normal !important;
+  letter-spacing: normal;
+  text-shadow: none;
+  transition: none;
 }
 .site-title:hover {
-  letter-spacing: 4px;
-  color: #222 !important;
+  letter-spacing: normal;
+  color: #fff !important;
 }
 .brand {
-  background: transparent !important; /* 移除背景色，使标题更纯净 */
+  background: #222 !important; /* 恢复默认的深色背景块，这样文字在任何背景图上都能看清 */
 }
 #spotify-player {
   width: 300px;
