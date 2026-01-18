@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>ROS系列项目 —— TurtleBot3 扩写版README | Nicole’s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="TurtleBot3 ROS package 的主要功能和核心组件：主要功能： TurtleBot3 是一个小型、低成本、可编程的移动机器人平台 它提供了完整的 ROS（机器人操作系统）集成支持 主要用于教育、研究和开发目的  核心功能包（Packages）： turtlebot3_node：核心功能节点，负责机器人的基本控制和状态管理     点击这里查看 turtlebot3_node 详细信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROS系列项目 —— TurtleBot3 扩写版README">
+<meta property="og:url" content="http://example.com/2025/04/29/ros-turtlebot3-readme/index.html">
+<meta property="og:site_name" content="Nicole’s Blog">
+<meta property="og:description" content="TurtleBot3 ROS package 的主要功能和核心组件：主要功能： TurtleBot3 是一个小型、低成本、可编程的移动机器人平台 它提供了完整的 ROS（机器人操作系统）集成支持 主要用于教育、研究和开发目的  核心功能包（Packages）： turtlebot3_node：核心功能节点，负责机器人的基本控制和状态管理     点击这里查看 turtlebot3_node 详细信">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-04-29T09:36:07.000Z">
+<meta property="article:modified_time" content="2026-01-18T09:17:09.251Z">
+<meta property="article:author" content="Nicole">
+<meta property="article:tag" content="tech_notes">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Nicole’s Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Nicole’s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ros-turtlebot3-readme" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/04/29/ros-turtlebot3-readme/" class="article-date">
+  <time class="dt-published" datetime="2025-04-29T09:36:07.000Z" itemprop="datePublished">2025-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      ROS系列项目 —— TurtleBot3 扩写版README
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="TurtleBot3-ROS-package-的主要功能和核心组件："><a href="#TurtleBot3-ROS-package-的主要功能和核心组件：" class="headerlink" title="TurtleBot3 ROS package 的主要功能和核心组件："></a>TurtleBot3 ROS package 的<strong>主要功能</strong>和<strong>核心组件</strong>：</h1><h3 id="主要功能："><a href="#主要功能：" class="headerlink" title="主要功能："></a>主要功能：</h3><ol>
+<li>TurtleBot3 是一个小型、低成本、可编程的移动机器人平台</li>
+<li>它提供了完整的 ROS（机器人操作系统）集成支持</li>
+<li>主要用于教育、研究和开发目的</li>
+</ol>
+<h3 id="核心功能包（Packages）："><a href="#核心功能包（Packages）：" class="headerlink" title="核心功能包（Packages）："></a>核心功能包（Packages）：</h3><ol>
+<li><p><code>turtlebot3_node</code>：核心功能节点，负责机器人的基本控制和状态管理</p>
+ <details> 
+ <summary>点击这里查看 <i><b>turtlebot3_node</b></i> 详细信息</summary>
+ <br>
+ <i><b>turtlebot3_node</b></i> 的<b>主要功能</b>和<b>核心节点</b>：
+ 
+<p> <b>► 主要功能</b>：</p>
+<ol>
+<li>作为 TurtleBot3 机器人的核心控制节点</li>
+<li>负责与硬件（OpenCR 控制器）的通信</li>
+<li>实现机器人的基本运动控制 and 传感器数据处理</li>
+<li>提供里程计（Odometry）信息</li>
+<li>管理机器人的状态和配置</li>
+</ol>
+<p> <b>► 核心节点和组件</b>：</p>
+<ol>
+<li><p>主节点（TurtleBot3）：</p>
+<ul>
+<li>位于 <code>turtlebot3.cpp</code></li>
+<li>负责初始化机器人系统</li>
+<li>管理硬件通信</li>
+<li>处理传感器数据</li>
+<li>发布机器人状态信息</li>
+</ul>
+</li>
+<li><p>差速驱动控制器（DiffDriveController）：</p>
+<ul>
+<li>位于 <code>diff_drive_controller.cpp</code></li>
+<li>实现差速驱动控制</li>
+<li>处理速度命令</li>
+<li>计算轮子转速</li>
+</ul>
+</li>
+<li><p>里程计节点（Odometry）：</p>
+<ul>
+<li>位于 <code>odometry.cpp</code></li>
+<li>计算和发布机器人的位置和姿态信息</li>
+<li>基于编码器数据计算运动学信息</li>
+</ul>
+</li>
+<li><p>DYNAMIXEL SDK 封装：</p>
+<ul>
+<li>位于 <code>dynamixel_sdk_wrapper.cpp</code></li>
+<li>提供与 DYNAMIXEL 电机通信的接口</li>
+<li>处理电机控制和状态反馈</li>
+</ul>
+</li>
+<li><p>传感器处理：</p>
+<ul>
+<li>位于 <code>sensors/</code> 目录</li>
+<li>处理各种传感器数据（如 IMU、激光雷达等）</li>
+<li>提供传感器数据接口</li>
+</ul>
+</li>
+</ol>
+<p> <b>► 主要通信接口</b>：</p>
+<ol>
+<li><p>订阅：</p>
+<ul>
+<li>速度命令（cmd_vel）</li>
+<li>配置参数</li>
+<li>传感器数据</li>
+</ul>
+</li>
+<li><p>发布：</p>
+<ul>
+<li>里程计信息</li>
+<li>传感器数据</li>
+<li>机器人状态</li>
+<li>诊断信息</li>
+</ul>
+</li>
+</ol>
+<p> ► 这个节点是<b>整个 TurtleBot3 系统的核心</b>，它负责：</p>
+<ul>
+<li>与硬件层的通信</li>
+<li>运动控制</li>
+<li>传感器数据处理</li>
+<li>状态管理</li>
+<li>提供上层应用所需的各种接口</li>
+</ul>
+<p> ► 通过这个节点，上层应用可以方便地控制机器人，获取传感器数据，实现各种功能。<b>它是连接硬件和上层应用的桥梁，是整个系统的基础。</b><br> </details><br> <br></p>
+</li>
+<li><p><code>turtlebot3_teleop</code>：远程遥控功能包，用于手动控制机器人</p>
+</li>
+<li><p><code>turtlebot3_navigation2</code>：导航功能包，实现自主导航功能</p>
+ <details> 
+ <summary>关于 <b> turtlebot3_cartographer、turtlebot3_navigation2 </b> 包，后面单开专题，写 <b> SLAM & 导航 </b> 相关的部分 ( <b>原理帖</b> 比较合适)。</summary>
+ <br>
+ 
+<p> 这个包是基于 ROS2 的 Navigation2 框架实现的，它提供了：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 完整的导航功能</span><br><span class="line">2. 灵活的配置选项</span><br><span class="line">3. 可靠的行为控制</span><br><span class="line">4. 实时的路径规划</span><br><span class="line">5. 精确的定位能力</span><br></pre></td></tr></table></figure>
+<p> 使用这个包需要理解：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. Navigation2 框架</span><br><span class="line">2. 路径规划算法</span><br><span class="line">3. 定位算法</span><br><span class="line">4. 控制理论</span><br><span class="line">5. 传感器数据处理</span><br><span class="line">6. 行为树设计</span><br><span class="line">7. 参数调优</span><br></pre></td></tr></table></figure>
+<p> 这个包是 TurtleBot3 实现自主导航的核心组件，它能够：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">► 在已知环境中自主导航</span><br><span class="line">► 避开动态障碍物 </span><br><span class="line">(重点标记，也是重点挖掘部分，但我要设计个反的，因为你逃它追，你插翅难飞.</span><br><span class="line">对了，说到飞，画个飞行器后视图吧.o0O0o。)</span><br><span class="line">► 实现精确的位姿控制</span><br><span class="line">► 提供实时的导航状态反馈</span><br></pre></td></tr></table></figure>
+ </details> 
+ <br>
+</li>
+<li><p><code>turtlebot3_description</code>：机器人的 URDF 描述文件，定义机器人的物理特性和结构</p>
+ <details> 
+ <summary>点击这里查看 <i><b>turtlebot3_description</b></i> 详细信息</summary>
+ 
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">► 主要功能：</span><br><span class="line"></span><br><span class="line">    1. 提供机器人的物理描述：</span><br><span class="line">        - 几何形状</span><br><span class="line">        - 质量属性</span><br><span class="line">        - 关节定义</span><br><span class="line">        - 传感器位置</span><br><span class="line"></span><br><span class="line">    2. 支持三种型号：</span><br><span class="line">        - Burger：基础型号</span><br><span class="line">        - Waffle：标准型号</span><br><span class="line">        - Waffle Pi：带树莓派相机的型号</span><br><span class="line"></span><br><span class="line">    3. 可视化支持：</span><br><span class="line">        - 提供 3D 模型</span><br><span class="line">        - RViz 配置文件</span><br><span class="line">        - 材质和颜色定义</span><br><span class="line"></span><br><span class="line">    4. 仿真支持：</span><br><span class="line">        - 碰撞检测模型</span><br><span class="line">        - 惯性参数</span><br><span class="line">        - 运动学描述</span><br></pre></td></tr></table></figure>
+<p> 这个包是 TurtleBot3 的基础描述包，它定义了机器人的物理特性，但 <strong>不包含</strong>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">► 控制逻辑        </span><br><span class="line">► 传感器驱动</span><br><span class="line">► 导航功能</span><br><span class="line">► 机械臂描述 </span><br><span class="line">P.S, 关于 turtlebot3_manipulation 包，后面单开一篇，manipulation相关的部分，关系着机器人bf帮我拧瓶盖的美好幻觉（大雾</span><br><span class="line"></span><br><span class="line">这些功能都在 ► 其他专门的包 中实现。</span><br></pre></td></tr></table></figure>
+ </details> 
+ <br>
+</li>
+<li><p><code>turtlebot3_bringup</code>：启动配置包，用于启动机器人的基本功能</p>
+</li>
+<li><p><code>turtlebot3_cartographer</code>：集成 Google Cartographer 的 SLAM（同时定位与地图构建）功能</p>
+ <details> 
+ <summary>点击这里查看 <i><b>turtlebot3_cartographer</b></i> 详细信息</summary>
+ <i><b>turtlebot3_cartographer</b></i> 包中包含了以下 <i><b>SLAM（Simultaneous Localization and Mapping，同时定位与地图构建）</b></i> 相关的知识，它能够：
+
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 实时构建环境地图</span><br><span class="line">2. 精确定位机器人位置</span><br><span class="line">3. 优化轨迹和位姿</span><br><span class="line">4. 处理传感器数据</span><br><span class="line">5. 提供实时地图更新</span><br></pre></td></tr></table></figure>
+<p> 这个包是基于 Google 的 Cartographer 算法实现的，它 <b>特别适合</b>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 室内环境建图</span><br><span class="line">- 实时定位</span><br><span class="line">- 大规模环境建图</span><br><span class="line">- 多传感器融合</span><br></pre></td></tr></table></figure>
+<p> 使用这个包需要理解：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. SLAM 基本原理</span><br><span class="line">2. 传感器数据处理</span><br><span class="line">3. 坐标系转换</span><br><span class="line">4. 位姿图优化</span><br><span class="line">5. 实时系统设计</span><br></pre></td></tr></table></figure>
+<p> P.S, 关于 <b>turtlebot3_cartographer、turtlebot3_navigation2 </b> 包，后面单开专题，写 <b>SLAM &amp; 导航</b> 相关的部分。</p>
+ </details></li>
+</ol>
+<h3 id="主要特点："><a href="#主要特点：" class="headerlink" title="主要特点："></a>主要特点：</h3><ol>
+<li>支持多个 ROS 版本分支：noetic（ROS1）、humble、jazzy 和 rolling（ROS2）</li>
+<li>提供完整的硬件驱动支持（如 DYNAMIXEL SDK、LDS 激光雷达驱动等）</li>
+<li>包含丰富的应用示例和扩展功能（如自动驾驶、机械臂操作、机器学习等）</li>
+<li>提供完整的文档支持和社区资源<br></li>
+</ol>
+<p><em>► 这个项目是一个非常完整的机器人平台，不仅提供了基础的移动机器人功能，还包括了大量的扩展应用，使其成为一个理想的教育和研究平台。每个功能包都有其特定的作用，共同构成了一个完整的机器人系统。</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/04/29/ros-turtlebot3-readme/" data-id="cuidODBumJinRzD1jhGe8_bm7" data-title="ROS系列项目 —— TurtleBot3 扩写版README" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tech-notes/" rel="tag">tech_notes</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/01/18/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/03/20/deepseek-api-analysis/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DeepSeek的API服务和官网返回结果的差异分析</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/tech-notes/" rel="tag">tech_notes</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/tech-notes/" style="font-size: 10px;">tech_notes</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/01/">January 2026</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/04/">April 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/01/18/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2025/04/29/ros-turtlebot3-readme/">ROS系列项目 —— TurtleBot3 扩写版README</a>
+          </li>
+        
+          <li>
+            <a href="/2025/03/20/deepseek-api-analysis/">DeepSeek的API服务和官网返回结果的差异分析</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/19/quantum-crypto-moss/">「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Nicole<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
