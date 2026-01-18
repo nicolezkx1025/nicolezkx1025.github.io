@@ -39,7 +39,7 @@ NexT.motion.middleWares = {
     brand && sequence.push({
       e: brand,
       p: {opacity: 1},
-      o: {duration: 200}
+      o: {duration: 600}
     });
 
     function getMistLineSettings(element, translateX) {

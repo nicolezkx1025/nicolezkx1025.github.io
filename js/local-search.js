@@ -219,6 +219,16 @@ document.addEventListener('DOMContentLoaded', () => {
             url    : element.querySelector('url').textContent
           };
         }) : JSON.parse(res);
+        // Decode content if encoded
+        datas.forEach(data => {
+          if (data.content && data.content.startsWith('base64:')) {
+            try {
+              data.content = decodeURIComponent(escape(atob(data.content.substring(7))));
+            } catch (e) {
+              console.error('Failed to decode search content', e);
+            }
+          }
+        });
         // Only match articles with not empty titles
         datas = datas.filter(data => data.title).map(data => {
           data.title = data.title.trim();

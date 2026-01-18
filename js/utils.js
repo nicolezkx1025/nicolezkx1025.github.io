@@ -9,6 +9,57 @@ HTMLElement.prototype.wrap = function(wrapper) {
 NexT.utils = {
 
   /**
+   * Hide private information in links.
+   */
+  hidePrivateInfo: function() {
+    const e = 'nicolezkx1025';
+    const m = 'nicolezkx@hotmail.com';
+    const x = 'nicolezkx';
+    document.querySelectorAll('a').forEach(link => {
+      let h = link.getAttribute('href');
+      let t = link.getAttribute('title');
+      if (h && (h.includes(e) || h.includes(m) || h.includes(x))) {
+        link.setAttribute('href', h.replace(m, '...').replace(e, '...').replace(x, '...'));
+        if (t) link.setAttribute('title', t.replace(m, '...').replace(e, '...').replace(x, '...'));
+        link.addEventListener('click', ev => {
+          if (ev.ctrlKey || ev.shiftKey || ev.metaKey) return;
+          ev.preventDefault();
+          if (h.includes('@')) {
+            window.location.href = h.startsWith('mailto:') ? h : 'mailto:' + h.replace(/^\//, '');
+          } else {
+            window.open(h, '_blank');
+          }
+        });
+      }
+    });
+    // For Gitalk
+    // This is a static replacement for the script tag content if needed, 
+    // but Gitalk usually runs before this or during NexT.boot.refresh.
+    // A better way is to ensure the global config is cleaned if possible.
+  },
+
+  /**
+   * Decode post content that has been Base64 encoded.
+   */
+  decodePostContent: function() {
+    document.querySelectorAll('.post-body[data-decode]').forEach(body => {
+      if (body.hasAttribute('data-decoded')) return;
+      try {
+        const encoded = body.textContent.trim();
+        // Use decodeURIComponent(escape(atob(...))) for UTF-8 support
+        const decoded = decodeURIComponent(escape(atob(encoded)));
+        body.innerHTML = decoded;
+        body.setAttribute('data-decoded', 'true');
+        // Re-run some utilities that might depend on the content
+        if (CONFIG.fancybox) NexT.utils.wrapImageWithFancyBox();
+        if (window.pangu) window.pangu.spacingPage();
+      } catch (e) {
+        console.error('Failed to decode post content', e);
+      }
+    });
+  },
+
+  /**
    * Wrap images with fancybox.
    */
   wrapImageWithFancyBox: function() {

@@ -92,6 +92,8 @@ NexT.boot.refresh = function() {
   NexT.utils.registerSidebarTOC();
   NexT.utils.wrapTableWithBox();
   NexT.utils.registerVideoIframe();
+  NexT.utils.hidePrivateInfo();
+  NexT.utils.decodePostContent();
 };
 
 NexT.boot.motion = function() {
