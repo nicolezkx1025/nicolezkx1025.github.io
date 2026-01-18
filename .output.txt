@@ -1,0 +1,539 @@
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:63
++ ... t-ChildItem -Recurse -Filter index.html | ForEach-Object {  = .FullNa ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+= : The term '=' is not recognized as the name of a cmdlet, function, script fi
+le, or operable program. Check the spelling of the name, or if a path was inclu
+ded, verify that the path is correct and try again.
+At line:1 char:77
++ ... ecurse -Filter index.html | ForEach-Object {  = .FullName;  = Get-Con ...
++                                                                 ~
+    + CategoryInfo          : ObjectNotFound: (=:String) [], CommandNotFoundEx
+   ception
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+-notmatch : The term '-notmatch' is not recognized as the name of a cmdlet, fun
+ction, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:103
++ ... h-Object {  = .FullName;  = Get-Content  -Raw; if ( -notmatch 'APlaye ...
++                                                         ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (-notmatch:String) [], CommandNo
+   tFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
