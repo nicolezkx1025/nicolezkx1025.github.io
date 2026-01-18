@@ -39,7 +39,7 @@ NexT.motion.middleWares = {
     brand && sequence.push({
       e: brand,
       p: {opacity: 1},
-      o: {duration: 600}
+      o: {duration: 1200}
     });
 
     function getMistLineSettings(element, translateX) {
@@ -72,13 +72,13 @@ NexT.motion.middleWares = {
     title && sequence.push({
       e: title,
       p: {opacity: 1, top: 0},
-      o: {duration: 200}
+      o: {duration: 800}
     });
 
     subtitle && sequence.push({
       e: subtitle,
       p: {opacity: 1, top: 0},
-      o: {duration: 200}
+      o: {duration: 800}
     });
 
     (CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') && image && pushImageToSequence();
@@ -100,7 +100,7 @@ NexT.motion.middleWares = {
   menu: function(integrator) {
     Velocity(document.querySelectorAll('.menu-item'), 'transition.slideDownIn', {
       display : null,
-      duration: 200,
+      duration: 600,
       complete: function() {
         integrator.next();
       }
@@ -133,8 +133,9 @@ NexT.motion.middleWares = {
 
     if (postBlock.length > 0) {
       var postMotionOptions = window.postMotionOptions || {
-        stagger : 100,
+        stagger : 200,
         drag    : true,
+        duration: 800,
         complete: function() {
           integrator.next();
         }
