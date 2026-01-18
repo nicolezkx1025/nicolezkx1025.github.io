@@ -73,6 +73,7 @@
 </noscript>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+  <style>.aplayer-fixed { z-index: 9999 !important; }</style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -439,13 +440,25 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
   server="netease"
   type="playlist"
   id="2027208119"
-  
   fixed="true"
   autoplay="true"
   loop="all"
   order="list"
   preload="auto"
-  list-folded="true">
+  list-folded="true"
+  storage-name="metingjs">
+</meting-js>
+<meting-js
+  server="netease"
+  type="playlist"
+  id="13484276206"
+  fixed="true"
+  autoplay="false"
+  loop="all"
+  order="list"
+  preload="auto"
+  list-folded="true"
+  storage-name="metingjs-original">
 </meting-js>
 
 </body>
