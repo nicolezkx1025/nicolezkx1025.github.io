@@ -1,55 +1,64 @@
 # Nicole's Blog - 管理指南
 
-这是一个基于 Hexo NexT 主题生成的静态博客。目前直接通过 Git 维护部署在 GitHub Pages 上的 HTML 文件。
+这是一个基于 Hexo NexT 主题生成的博客。目前您可以选择 **"纯静态手动维护"** 或 **"Hexo 源码自动化维护"** 两种模式。
 
-## 如何发布新文章
+---
 
-为了保持一致性和专业性，请按照以下步骤添加新文章：
+## 模式一：纯静态手动维护（当前状态）
 
-### 1. 创建文章文件夹
-在根目录下按照 `年/月/日/文章标题/` 的格式创建目录。
-例如：`2026/01/18/my-new-post/`
+如果您不想安装 Node.js 和 Hexo 环境，可以直接修改 HTML 文件。
 
-### 2. 准备 index.html
-建议直接复制现有文章的 `index.html` 作为模板进行修改。
-**核心修改点：**
-- `<title>`: 文章标题。
-- `CONFIG.page`: 更新 `title`。
-- `<h2 class="post-title">`: 页面显示的标题。
-- `<time>`: 发布时间。
-- `<div class="post-body">`: 文章正文内容。
-- **Gitalk 评论配置**（见下文）。
+### 1. 发布新文章
+1. **创建目录**：按 `年/月/日/文章标题/` 格式创建文件夹（如 `2026/01/18/my-post/`）。
+2. **准备内容**：复制现有文章的 `index.html` 作为模板，修改标题、时间和正文内容。
+3. **配置 Gitalk**：
+   - 生成路径 MD5：`[System.BitConverter]::ToString((new-object System.Security.Cryptography.MD5CryptoServiceProvider).ComputeHash([System.Text.Encoding]::UTF8.GetBytes('路径'))).Replace('-', '').ToLower()`
+   - 更新代码中的 `id` 和 `title` 为该 MD5 值。
+4. **手动更新索引**：必须同步更新 `index.html` (首页列表)、`archives/index.html` (归档) 和 `search.json` (搜索)。
 
-### 3. 配置 Gitalk 评论（最专业方式）
-为了保持 Issue 列表整洁，每篇文章的 `id` 和 `title` 必须保持一致且使用 MD5 加密。
-1. **生成 ID**: 
-   在 PowerShell 中运行以下命令生成文章路径的 MD5（例如：`2026/01/18/my-new-post/index.html`）：
-   ```powershell
-   [System.BitConverter]::ToString((new-object System.Security.Cryptography.MD5CryptoServiceProvider).ComputeHash([System.Text.Encoding]::UTF8.GetBytes('2026/01/18/my-new-post/index.html'))).Replace('-', '').ToLower()
-   ```
-2. **更新代码**: 
-   在 `index.html` 结尾处的 Gitalk 配置中，替换 `id` 和 `title`：
-   ```javascript
-   var gitalk = new Gitalk({
-     // ... 其他配置保持不变 ...
-     id: '你的MD5值',
-     title: 'Comment ID: 你的MD5值',
-     distractionFreeMode: true
-   });
-   ```
+---
 
-### 4. 更新索引与归档（重要）
-目前博客是静态 HTML，新增文章后需要**手动**更新以下页面以显示新链接：
-- 首页 `index.html`: 在文章列表中添加新文章的预览。
-- 归档页 `archives/index.html`: 添加新文章条目。
-- 搜索索引 `search.json`: 将新文章的标题、路径和内容加入 JSON 数组中（用于本地搜索）。
+## 模式二：Hexo 源码管理模式（推荐，更高效）
 
-### 5. 提交并推送
+如果您希望更简单地管理文章、自动生成索引和归档，建议切换回 Hexo 模式。
+
+### 为什么 Hexo 模式管理更简单？
+*   **Markdown 编写**：只需写简单的 `.md` 文件，无需处理复杂的 HTML 标签。
+*   **自动化生成**：Hexo 会自动帮您更新首页列表、归档页面、分类页面和搜索索引，完全消除手动维护 `search.json` 的痛苦。
+*   **配置统一**：Gitalk 等插件只需在 `_config.yml` 中配置一次，所有新文章自动生效。
+
+### 如何使用 Hexo 模式添加文章？
+1.  **创建文章**：
+    ```bash
+    hexo new "文章标题"
+    ```
+    这会在 `source/_posts/` 下生成一个 Markdown 文件。
+2.  **编写内容**：使用 Markdown 语法在生成的 `.md` 文件中写作。
+3.  **本地预览**：
+    ```bash
+    hexo server
+    ```
+4.  **生成并发布**：
+    ```bash
+    hexo clean && hexo generate && hexo deploy
+    ```
+    *注意：`hexo deploy` 会自动将生成的 HTML 推送到 `gh-pages` 分支。*
+
+### 注意事项（切换指南）
+*   **源码备份**：目前该仓库仅包含生成的静态 HTML。如果您要切换回源码模式，您需要找回包含 `source/`, `scaffolds/`, `themes/` 和 `_config.yml` 的 **Hexo 源码仓库**。
+*   **Gitalk 适配**：在 Hexo 的主题配置文件中设置 Gitalk 时，可以使用插件自动生成 MD5 作为 ID，保持与目前的“专业模式”一致。
+
+---
+
+## 总结：我该选哪种？
+
+*   **如果您只是偶尔发一篇短文**：继续使用 **模式一**，复制 HTML 即可，无需安装环境。
+*   **如果您追求效率和排版**：强烈建议使用 **模式二**。Markdown 的写作体验远超 HTML，且 Hexo 处理索引的能力能节省大量时间。
+
+---
+**提交与推送（手动模式）**:
 ```powershell
 git add .
 git commit -m "feat: add new post [文章标题]"
 git push origin gh-pages
 ```
-
----
-**提示**: 如果您之后切换回 Hexo 源码管理模式，请务必保留 `.git` 历史记录。
