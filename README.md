@@ -22,6 +22,22 @@
 
 如果您希望更简单地管理文章、自动生成索引和归档，建议切换回 Hexo 模式。
 
+### 🚀 源码找回与迁移指南（NEW）
+我已经为您从现有的静态 HTML 中提取并还原了 **3 篇核心文章** 的 Markdown 源码。
+
+**操作步骤：**
+1. **获取源码**：源码文件位于本地目录 `hexo_source/_posts/` 下。
+2. **准备 Hexo 环境**：
+   - 找回您包含 `_config.yml` 的原始 Hexo 文件夹。
+   - 如果找不到了，可以新建一个：`hexo init my-blog`。
+3. **放置文章**：将 `hexo_source/_posts/` 里的 `.md` 文件全部复制到 Hexo 项目的 `source/_posts/` 目录下。
+4. **生成与部署**：
+   ```bash
+   hexo clean
+   hexo g
+   hexo d
+   ```
+
 ### 为什么 Hexo 模式管理更简单？
 *   **Markdown 编写**：只需写简单的 `.md` 文件，无需处理复杂的 HTML 标签。
 *   **自动化生成**：Hexo 会自动帮您更新首页列表、归档页面、分类页面和搜索索引，完全消除手动维护 `search.json` 的痛苦。
