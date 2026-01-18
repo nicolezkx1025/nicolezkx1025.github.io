@@ -72,7 +72,7 @@
   </style>
 </noscript>
 
-  <link rel="stylesheet" href="/assets/css/APlayer.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -433,12 +433,13 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
 });
 </script>
 
-<script src="/assets/js/APlayer.min.js"></script>
-<script src="/assets/js/Meting.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 <meting-js
   server="netease"
   type="playlist"
   id="2027208119"
+  container=".aplayer-container"
   fixed="true"
   autoplay="false"
   loop="all"
@@ -447,5 +448,6 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
   list-folded="true">
 </meting-js>
 
+<div class="aplayer-container"></div>
 </body>
 </html>
