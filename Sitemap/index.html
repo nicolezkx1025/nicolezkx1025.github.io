@@ -76,7 +76,15 @@
 </noscript>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-  <style>.aplayer-fixed { z-index: 9999 !important; }</style>
+  <style>
+    .aplayer.aplayer-fixed {
+      z-index: 999999 !important;
+    }
+    .aplayer.aplayer-fixed .aplayer-body {
+      bottom: 20px !important;
+      left: 20px !important;
+    }
+  </style>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -439,7 +447,8 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
   loop="all"
   order="list"
   preload="auto"
-  list-folded="true">
+  list-folded="true"
+  theme="#ad7a86">
 </meting-js>
 
 </body>
