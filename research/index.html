@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Nicole’s Blog">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-09-10T12:00:00.000Z">
-<meta property="article:modified_time" content="2026-09-10T12:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-11T10:00:00.000Z">
 <meta property="article:author" content="Nicole">
 <meta name="twitter:card" content="summary">
 
@@ -108,7 +108,7 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-playlist"><a href="/playlist/" rel="section"><i class="fa fa-music fa-fw"></i>playlist</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
-      <li class="menu-item menu-item-research menu-item-active"><a href="/research/" rel="section"><i class="fa fa-flask fa-fw"></i>Research</a></li>
+      <li class="menu-item menu-item-research"><a href="/research/" rel="section"><i class="fa fa-flask fa-fw"></i>Research</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -220,52 +220,53 @@
       <div class="post-body">
 <h3>我长期关注的一个问题</h3>
 <p>智能系统如何<strong>表示、理解和运用世界</strong>。</p>
-<p>这条兴趣线的形状是这样的:</p>
-<blockquote><p>Hidden State 表示 → 不确定性量化(UQ) → 世界模型 → 持续内部状态 → 自主导向智能体(Self-directed Agent)</p></blockquote>
-<p>从底层的隐状态表示出发,经过不确定性量化、构建世界模型、形成持久内部状态,最终演化出具备自主性的智能体。</p>
+<p>这条兴趣线的形状是这样的：</p>
+<blockquote><p>Hidden State 表示 → 不确定性量化（UQ）→ 世界模型 → 持续内部状态 → 自主导向智能体（Self-directed Agent）</p></blockquote>
+<p>从底层的隐状态表示出发，经过不确定性量化、构建世界模型、形成持久内部状态，最终演化出具备自主性的智能体。</p>
 <h3>三个子方向</h3>
 <p><strong>1. 可观测的智能表示</strong></p>
-<p>隐状态空间是否存在稳定、可解释、可迁移的结构;不同模态之间如何形成共享状态空间;能否借助数学方法提升内部状态的可观测性。</p>
+<p>隐状态空间是否存在稳定、可解释、可迁移的结构；不同模态之间如何形成共享状态空间；能否借助数学方法提升内部状态的可观测性。</p>
 <p><strong>2. 可信的世界模型</strong></p>
-<p>让智能体不仅能够预测未来,还能给出预测的可靠程度——不确定性传播、风险边界建模,以及在传感器退化条件下的失效识别。真正难的不是“预测得准”,而是“知道自己有多不确定”。</p>
+<p>让智能体不仅能够预测未来，还能给出预测的可靠程度——不确定性传播、风险边界建模，以及在传感器退化条件下的失效识别。真正难的不是“预测得准”，而是“知道自己有多不确定”。</p>
 <p><strong>3. 持续自主智能</strong></p>
-<p>长期记忆结构与周期性的离线隐状态重构机制,使系统在缺少外部任务时仍能保持状态连续,并逐步由内部状态形成下一阶段目标。</p>
+<p>长期记忆结构与周期性的离线隐状态重构机制，使系统在缺少外部任务时仍能保持状态连续，并逐步由内部状态形成下一阶段目标。</p>
 <h3>方法取向</h3>
-<p>把机器人学中已相对成熟的状态估计与可观测性分析思路,引入以大模型为主体的智能系统:为“隐状态”建立可观测性,为“预测”配套不确定性,为“长期运行”设计状态重构机制。</p>
-<p>我认为未来智能的进展,可能不只来自更大的模型规模,而取决于三个基础问题的答案:智能如何形成内部状态、内部状态如何被观测与量化、智能体如何基于长期状态产生自主目标。</p>
-<h3>工程实践(2018 年至今)</h3>
-<p>研究兴趣之外,我一直在工业一线做 AI 系统的落地,<strong>从算法设计到线上部署走完整链路</strong>。以下为可直接核查的系统与指标:</p>
-<p><strong>大模型与智能体(2025 — 2026)</strong></p>
+<p>把机器人学中已相对成熟的状态估计与可观测性分析思路，引入以大模型为主体的智能系统：为“隐状态”建立可观测性，为“预测”配套不确定性，为“长期运行”设计状态重构机制。</p>
+<p>我认为未来智能的进展，可能不只来自更大的模型规模，而取决于三个基础问题的答案：智能如何形成内部状态、内部状态如何被观测与量化、智能体如何基于长期状态产生自主目标。</p>
+<h3>工程实践（2018 年至今）</h3>
+<p>研究兴趣之外，我一直在工业一线做 AI 系统的落地，<strong>从算法设计到线上部署走完整链路</strong>。以下为可直接核查的系统与指标：</p>
+<p><strong>大模型与智能体（2025 — 2026）</strong></p>
 <ul>
-<li>构建 Agent 自我反思与纠错机制,基于 RLHF-PPO 开展多轮模型对齐,构建 CoT 思维链偏好数据集,复杂金融推理任务准确率提升 15%</li>
-<li>搭建在线评估反馈闭环,优化 RAG 检索重排序策略,结合 vLLM 推理加速,系统响应延迟降至 2s 以内</li>
-<li>多模态 RAG + MoE 架构:整合财务与工商文本等多维数据,配合 DeepSpeed 分布式训练,长文本处理效率提升 30%</li>
-<li>集成 STT/TTS 端到端语音的智能体系统:分布式优化训练使响应时间提升 40%,支持 100+ 用户并发</li>
+<li>构建 Agent 自我反思与纠错机制，基于 RLHF-PPO 开展多轮模型对齐，构建 CoT 思维链偏好数据集，复杂金融推理任务准确率提升 15%</li>
+<li>搭建在线评估反馈闭环，优化 RAG 检索重排序策略，结合 vLLM 推理加速，系统响应延迟降至 2s 以内</li>
+<li>多模态 RAG + MoE 架构：整合财务与工商文本等多维数据，配合 DeepSpeed 分布式训练，长文本处理效率提升 30%</li>
+<li>集成 STT/TTS 端到端语音的智能体系统：分布式优化训练使响应时间提升 40%，支持 100+ 用户并发</li>
 </ul>
-<p><strong>多模态文档理解与 NLP(2019 — 2022 ｜ 平安资产管理)</strong></p>
+<p><strong>多模态文档理解与 NLP（2019 — 2022｜平安资产管理）</strong></p>
 <ul>
-<li>无边框复杂表格多模态信息抽取:构建多格式复杂表格数据集,使用 GNN 完成文本—布局关系编码与端到端表格重建,简单表头重建准确率 97%、复杂表头 94%</li>
-<li>信用评级报告自动化生成:融合 NLP 模型与行业专家评估规则搭建生成流水线,覆盖一万余家上市公司,1.5 小时内批量输出 15000+ 份报告</li>
-<li>债券发行监管问询文本抽取:基于 Transformer 搭建抽取模块,Python 开发、Docker 容器化部署上线,关键信息抽取准确率 95%</li>
+<li>无边框复杂表格多模态信息抽取：构建多格式复杂表格数据集，使用 GNN 完成文本—布局关系编码与端到端表格重建，简单表头重建准确率 97%、复杂表头 94%</li>
+<li>信用评级报告自动化生成：融合 NLP 模型与行业专家评估规则搭建生成流水线，覆盖一万余家上市公司，1.5 小时内批量输出 15000+ 份报告</li>
+<li>债券发行监管问询文本抽取：基于 Transformer 搭建抽取模块，Python 开发、Docker 容器化部署上线，关键信息抽取准确率 95%</li>
 </ul>
-<p><strong>金融数据系统与治理(2022 — 2024 ｜ 兴银理财)</strong></p>
+<p><strong>金融数据系统与治理（2022 — 2024｜兴银理财）</strong></p>
 <ul>
-<li>主导财务数据全生命周期系统(DAP)的架构设计与前后端开发(金融统计、风险管理、债券发行、股权投资报表),部署 LSTM + 规则引擎智能校验框架,数据治理时效提升 60%,支撑监管报送零延误</li>
-<li>主导数据管道重构,协同计财部达成向银监会、人民银行的自动化报送,人工干预率降低 85%</li>
-<li>设计理财产品收益与风险评估指标体系,投资前风险管理关键指标预测误差 &lt; 2%</li>
+<li>主导财务数据全生命周期系统（DAP）的架构设计与前后端开发（金融统计、风险管理、债券发行、股权投资报表），部署 LSTM + 规则引擎智能校验框架，数据治理时效提升 60%，支撑监管报送零延误</li>
+<li>主导数据管道重构，协同计财部达成向银监会、人民银行的自动化报送，人工干预率降低 85%</li>
+<li>设计理财产品收益与风险评估指标体系，投资前风险管理关键指标预测误差 &lt; 2%</li>
 </ul>
-<p><strong>计算机视觉与分布式计算(2018 — 2019 ｜ 平安城市建设科技)</strong></p>
+<p><strong>计算机视觉与分布式计算（2018 — 2019｜平安城市建设科技）</strong></p>
 <ul>
-<li>基于 Mask R-CNN / Faster R-CNN 完成户型图墙体、门窗、家具的实例识别与定位,项目入选 2018 年度工程建设行业最佳实践案例,获平安集团科技新锐成果奖</li>
-<li>基于 Apache Spark 搭建分布式数据处理与机器学习服务中台,以 PySpark 重构 TextRank 实现分布式文本摘要</li>
+<li>基于 Mask R-CNN / Faster R-CNN 完成户型图墙体、门窗、家具的实例识别与定位，项目入选 2018 年度工程建设行业最佳实践案例，获平安集团科技新锐成果奖</li>
+<li>基于 Apache Spark 搭建分布式数据处理与机器学习服务中台，以 PySpark 重构 TextRank 实现分布式文本摘要</li>
 </ul>
 <p><strong>工程栈与成果</strong></p>
 <ul>
-<li>语言与框架:Python / C / PySpark;PyTorch / TensorFlow / vLLM / OpenCV</li>
-<li>训练与部署:DeepSpeed 分布式训练、Docker 容器化部署、Spark 分布式计算</li>
-<li>成果:5 项发明专利(其中 2 项为第一发明人);1 篇工业预研报告(待投稿)</li>
+<li>语言与框架：Python / C / PySpark；PyTorch / TensorFlow / vLLM / OpenCV</li>
+<li>训练与部署：DeepSpeed 分布式训练、Docker 容器化部署、Spark 分布式计算</li>
+<li>成果：5 项发明专利（其中 2 项为第一发明人）；1 篇工业预研报告（待投稿）</li>
 </ul>
-<p>我关心的很多问题,正是从这些真实系统里长出来的:在低容错、强约束的场景中,算法要可靠,而不只是“效果好”。</p>
+<p>我关心的很多问题，正是从这些真实系统里长出来的：在低容错、强约束的场景中，算法要可靠，而不只是“效果好”。</p>
+<p><em>如需进一步交流，欢迎邮件联系：kzhangas@connect.ust.hk</em></p>
       </div>
       
       
