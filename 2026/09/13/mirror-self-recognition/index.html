@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="自进化(self-improving)是伞,RSI(递归自我改进)是伞下更严格的部分——&quot;变好的能力&quot;本身也在变好。这张路径图是我梳理的 SI → RSI 发展路线。 六步路线 L0 人工 Agent :人类写死脚手架,Agent 只执行;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这次偏移是猫还是世界:镜像自我认知测试下的 TTT 与 RSI">
+<meta property="og:url" content="http://example.com/2026/09/13/mirror-self-recognition/">
+<meta property="og:site_name" content="Nicole’s Blog">
+<meta property="og:description" content="自进化(self-improving)是伞,RSI(递归自我改进)是伞下更严格的部分——&quot;变好的能力&quot;本身也在变好。这张路径图是我梳理的 SI → RSI 发展路线。 六步路线 L0 人工 Agent :人类写死脚手架,Agent 只执行;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-09-13T00:00:00.000Z">
+<meta property="article:modified_time" content="2026-09-13T00:00:00.000Z">
+<meta property="article:author" content="Nicole">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="tech-notes">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2026/09/13/mirror-self-recognition/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/09/13/mirror-self-recognition/","path":"2026/09/13/mirror-self-recognition/index.html","title":"这次偏移是猫还是世界:镜像自我认知测试下的 TTT 与 RSI"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>这次偏移是猫还是世界:镜像自我认知测试下的 TTT 与 RSI | Nicole’s Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3QwzBRtNFuLWLynR",ck:"3QwzBRtNFuLWLynR"})</script>
+
+<!-- refine.css (local test) -->
+<link rel="stylesheet" href="/css/refine.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Nicole’s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-playlist"><a href="/playlist/" rel="section"><i class="fa fa-music fa-fw"></i>playlist</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-research"><a href="/research/" rel="section"><i class="fa fa-bullseye fa-fw"></i>Focus</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E8%A7%84%E5%88%92%E6%96%B9%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">集群规划方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E4%B8%80%EF%BC%9A%E8%AE%A4%E7%9F%A5%E7%96%86%E5%9C%9F%E4%B8%8E-AI-%E5%89%8D%E6%B2%BF%E6%8E%A2%E7%B4%A2-Cognition-AI-Frontier"><span class="nav-number">2.</span> <span class="nav-text">集群一：认知疆土与 AI 前沿探索 (Cognition &amp; AI Frontier)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E4%BA%8C%EF%BC%9A%E5%9C%BA%E6%99%AF%E5%8F%99%E4%BA%8B%E4%B8%8E%E6%84%9F%E5%AE%98%E5%AE%9E%E9%AA%8C%E5%AE%A4-Sensory-Lab-Media"><span class="nav-number">3.</span> <span class="nav-text">集群二：场景叙事与感官实验室 (Sensory Lab &amp; Media)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E4%B8%89%EF%BC%9A%E6%9E%81%E8%87%B4%E7%BA%AF%E5%87%80%E7%9A%84%E6%95%B0%E5%AD%97%E7%94%9F%E6%80%81-Pure-Digital-Ecosystem"><span class="nav-number">4.</span> <span class="nav-text">集群三：极致纯净的数字生态 (Pure Digital Ecosystem)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E5%9B%9B%EF%BC%9A%E7%A4%BE%E4%BC%9A%E5%8D%8F%E4%BD%9C%E4%B8%8E%E4%BB%B7%E5%80%BC%E6%95%B4%E5%90%88-Social-Synthesis-Legacy"><span class="nav-number">5.</span> <span class="nav-text">集群四：社会协作与价值整合 (Social Synthesis &amp; Legacy)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%A4%87%E5%8A%9B%E9%87%8F%EF%BC%9A%E6%A0%B8%E5%BF%83%E7%94%9F%E5%91%BD%E5%8A%9B%E4%B8%8E%E4%BD%93%E8%83%BD%E5%9F%BA%E7%9F%B3-Vitality-Performance"><span class="nav-number">6.</span> <span class="nav-text">后备力量：核心生命力与体能基石 (Vitality &amp; Performance)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nicole</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      
+      <span class="links-of-author-item">
+        <a href="mailto:nicolezkx@hotmail.com" title="E-Mail → mailto:nicolezkx@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/09/13/mirror-self-recognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nicole">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="这次偏移是猫还是世界:镜像自我认知测试下的 TTT 与 RSI | Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          这次偏移是猫还是世界:镜像自我认知测试下的 TTT 与 RSI</h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2026-09-13 00:00:00" itemprop="dateCreated datePublished" datetime="2026-09-13T00:00:00+08:00">2026-09-13</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>先说结论：<strong>RSI 能过（确切说是 L3 双层循环那一档），TTT 过不了</strong>。而且 TTT 的失效方式，恰好就是一只猫照镜子时的样子：它看得很认真，只是认错了对象。</p>
+<p><em>本文区分两类句子：<strong>【事实】</strong>有出处、可查；<strong>【判断】</strong>是我的推断，未经验证。请按这个标签来读。</em></p>
+<h3>一、MSR 到底考什么</h3>
+<p>镜像自我认知测试（Mirror Self-Recognition, MSR）最经典的形式是 Gallup 1970 年的标记实验【事实】。它其实是三关，不是一关。下面用一只猫来做比喻——不只是因为好懂，而是因为猫恰好属于"通不过"的那一类【事实：猫通常通不过镜像标记测试，对镜中影像表现为社交反应，即把镜像当作另一只猫】。</p>
+<div class="tbl"><table>
+<thead><tr><th>关卡</th><th>考什么</th><th>机器上的对应物</th></tr></thead>
+<tbody>
+<tr><td>① 相关性检测</td><td>镜中影像动，是不是"因为猫动"</td><td>系统能否判断某变化由自己引起</td></tr>
+<tr><td>② 自我指向行为</td><td>用镜子检查自己的身体</td><td>有没有"自己"这个概念所指的边界</td></tr>
+<tr><td>③ 标记指向</td><td>发现<strong>自己身上</strong>多了标记并去处理</td><td>能否发现<strong>自身</strong>的缺陷并修正</td></tr>
+</tbody>
+</table></div>
+<p>核心从来不是"能不能看到镜子"，而是<strong>归属判断</strong>：镜子里的那团变化，是猫自己，还是另一只猫。<strong>猫的默认答案是后者</strong>——它不会说"这是我"，它觉得屋里多了一只猫。这个"认错对象"的动作，就是全文的比喻。</p>
+<p>需要说明的是，MSR 在比较心理学里是有争议的：有观点认为它测的是身体图式或相关性检测，而非自我意识，标记实验在不同物种上的复现也不稳定【事实】。所以本文说的"通过"，只在<strong>结构层面</strong>成立。</p>
+<h3>二、TTT 过不了第一关</h3>
+<p>TTT 至少要分两层看：<strong>架构层</strong>把"测试时做梯度下降"当作序列模型的隐藏状态更新机制；<strong>适配层</strong>结构不动，推理时用无标注测试流在线更新以对付分布漂移。过不了 MSR 的是适配层【判断】。</p>
+<p>原因很具体：适配层的目标函数——熵最小化、伪标签一致性、归一化统计量更新——<strong>没有任何一项能区分"世界变了"和"自己坏了"</strong>。传感器退化时，它唯一能做的是调整自己去拟合当前输入，也就是<strong>把自己的退化解释成世界的改变</strong>。这不是看不见镜子，是看见了镜中的自己，却认成另一只猫。</p>
+<p>更糟的是它会朝"更自信"而不是"更正确"的方向收敛：前提一碎，模型收敛到一个自信的错误上。所以我认为，<strong>没有门控的在线自适应，在退化场景下成功率往往先升后降</strong>【判断】。</p>
+<h3>三、控制界四十年前就在处理这个问题</h3>
+<p>"这次偏移是猫还是世界"不是新问题。双环 PID 里，内环快、外环慢，恰好与 TTT（快环）／RSI（慢环）同构【判断】。而控制界早就给它起了名字、造了工具，也栽过跟头。</p>
+<p><strong>积分饱和就是"归属错误"的经典病理【事实】</strong>：积分项会把执行器饱和（<em>自己的极限</em>）误记成外部持续扰动，然后越积越多——这与 TTT 的归属错误是同一个失效模式【判断】。它的解药叫抗积分饱和（anti-windup）。</p>
+<p>更有意思的是互补滤波。<strong>Mahony 等人的非线性互补滤波里含一个显式的陀螺零偏估计项【事实】</strong>——那就是一个写在公式里的"是猫坏了吗"估计器：它把陀螺零偏（自己的毛病）和姿态真实变化（世界的动静）分开估计，同时把加速度计当作<strong>不可被自身环路改写的世界参考</strong>。换句话说，互补滤波本身就是一台归属判别器。</p>
+<p>这门学科有正式的名字：<strong>故障检测与隔离（Fault Detection and Isolation, FDI）</strong>——残差生成、解析冗余、观测器法，几十年积累，工具成熟【事实】。</p>
+<p>而 TTT 与自进化智能体这个圈子，基本不引 FDI，两边几乎不通话【判断】。我认为这是眼下最值得补的一道缝。</p>
+<h3>四、长环：Rohrs 反例早于 reward hacking 四十年</h3>
+<p>RSI 的长环对应自适应控制。1985 年 Rohrs 等人给出了著名反例：<strong>存在未建模动态与有界扰动时，连续时间自适应控制律会发散</strong>【事实】。不是学不会，是<strong>越学越坏</strong>——这与今天的 reward hacking、自举数据误差放大是同一类结构【判断】。</p>
+<p>另外两个可直接搬运的概念：</p>
+<ul>
+<li><strong>持续激励（Persistence of Excitation, PE）条件</strong>：激励不够丰富时，参数估计不会收敛到真值【事实】。对照今天的"搜索集=评测集"，问题是同一个【判断】。</li>
+<li><strong>迭代学习控制（ILC）的收敛条件</strong>：逐轮改进必须有收敛判据，否则发散是默认结局【事实】。</li>
+</ul>
+<div class="gate-box">
+<div class="gate-tag">Reserved &middot; 需邮件索取</div>
+<h3>五、可搬运的工具箱　·　六、RSI 的阶梯其实是"镜像能力"曲线　·　七、三个门槛其实是同一件事</h3>
+<p>这三节是全文最核心的部分，也是我<b>刻意不公开</b>的部分：</p>
+<ul>
+<li><b>五</b>：1980 年代为自适应控制做的四件鲁棒化装置（死区／σ 修正／投影算子／抗积分饱和），逐条映射到今天 TTT 与自进化门控的设计上——一张可以直接搬的表。</li>
+<li><b>六</b>：为什么 <b>L3 双层循环才是真正"通过镜像测试"的那一档</b>，而 L2 只是闭环；以及这条判据怎么用。</li>
+<li><b>七</b>：把自进化系统的三道门槛（验证信号／评测诚实性／算力回馈），重述为同一个归属问题的三个变体。</li>
+</ul>
+<p>我公开判断，不公开推导。<b>若需要完整映射表与推导，请邮件索取</b>——
+<a href="mailto:kzhangas@connect.ust.hk?subject=%E7%B4%A2%E5%8F%96%E3%80%8A%E9%95%9C%E5%83%8F%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5%E6%B5%8B%E8%AF%95%E3%80%8B%E5%85%A8%E6%96%87">kzhangas@connect.ust.hk</a>
+（主题写「索取镜像测试全文」即可，不必解释理由，我会把密码回给你）。</p>
+<div class="gate-form">
+<input id="gate-pw" type="password" placeholder="输入密码解锁" autocomplete="off">
+<button onclick="gateUnlock()">解锁</button>
+</div>
+<div class="gate-msg" id="gate-msg"></div>
+<div class="gate-content" id="gate-content"></div>
+</div>
+<script>
+var GATE={
+ "v": 1,
+ "alg": "AES-256-GCM",
+ "kdf": "PBKDF2-SHA256",
+ "iterations": 200000,
+ "salt": "wwpP90UyOSi54lF+1/vPgA==",
+ "iv": "PW9IAO3vBn+bFRhf",
+ "ct": "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"
+};
+function b64(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
+function gateUnlock(){
+  var msg=document.getElementById('gate-msg'),pw=document.getElementById('gate-pw').value;
+  if(!pw){msg.className='gate-msg';msg.textContent='请输入密码。';return;}
+  if(!(window.crypto&&crypto.subtle)){msg.className='gate-msg';msg.textContent='当前环境不支持解密，请用现代浏览器打开（HTTPS 或 localhost）。';return;}
+  msg.className='gate-msg';msg.textContent='解锁中…';
+  var enc=new TextEncoder();
+  crypto.subtle.importKey('raw',enc.encode(pw),'PBKDF2',false,['deriveKey']).then(function(km){
+    return crypto.subtle.deriveKey({name:'PBKDF2',salt:b64(GATE.salt),iterations:GATE.iterations,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+  }).then(function(key){
+    return crypto.subtle.decrypt({name:'AES-GCM',iv:b64(GATE.iv)},key,b64(GATE.ct));
+  }).then(function(pt){
+    document.getElementById('gate-content').innerHTML=new TextDecoder().decode(pt);
+    msg.className='gate-msg ok';msg.textContent='已解锁。';
+    document.getElementById('gate-pw').value='';
+  }).catch(function(){
+    msg.className='gate-msg';msg.textContent='密码不对。若还没有密码，请邮件索取。';
+  });
+}
+</script><h3>八、边界，以及邀请</h3>
+<ul>
+<li>这是<strong>结构同构，不是结论照搬</strong>。可迁移的是失效模式与鲁棒化手段，不是稳定性证明。</li>
+<li>MSR 本身有争议，"通过"只能在结构层面说，不涉及现象学意义上的自我意识。</li>
+<li><strong>猫只是比喻</strong>：全文用猫讲归属问题，不是在做动物认知判断。选猫的理由很具体——猫照镜子时把镜中的自己当成另一只猫，这个"认错对象"的动作，恰好就是 TTT 适配层的失效模式。</li>
+<li><strong>我没有在真机或大规模系统上验证过其中任何一条</strong>，这些都是判断。</li>
+<li>如果这套映射已经有人发表过，请一定告诉我——我不想重复造轮子，更不想显得在重新发明。这篇写出来就是为了被反驳：能指出我错在哪的对话，比十个赞同有用。</li>
+</ul>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/AI/" rel="tag"># AI</a>
+              <a href="/tags/tech-notes/" rel="tag"># tech-notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/08/20/rsi-roadmap/" rel="prev" title="RSI 发展路径图:从自我改进到递归自我改进">
+                  <i class="fa fa-angle-left"></i> RSI 发展路径图:从自我改进到递归自我改进
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Nicole</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"nicolezkx1025","repo":"nicolezkx1025.github.io","client_id":"Ov23ctP4pxy8WwWFPWKk","client_secret":"6ba766934ca018b2267b91ec34efa1c75f9c2e91","admin_user":"nicolezkx1025","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d128ec87a9e77bfe4ba5bd588b5324ef"}</script>
+<script src="/js/third-party/comments/gitalk.js" defer></script>
+
+    <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+  <div id="spotify-player" style="position: fixed; left: 20px; bottom: 20px; z-index: 999999;">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZSEZuA8pMrb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="摘要:模型是&quot;喂&quot;出来的,算力是&quot;拧&quot;出来的。这篇从 Spark 的内存计算讲起,讲到分布式训练的并行三件套,把&quot;高性能计算&quot;这层底子打扎实。 一、为什么需要分布式:单机瓶颈的三堵墙 算力墙 :单核主">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高性能与分布式计算:从 Spark 到分布式训练,算力是怎么"拧"出来的">
+<meta property="og:url" content="http://example.com/2025/09/06/hpc-distributed/index.html">
+<meta property="og:site_name" content="Nicole’s Blog">
+<meta property="og:description" content="摘要:模型是&quot;喂&quot;出来的,算力是&quot;拧&quot;出来的。这篇从 Spark 的内存计算讲起,讲到分布式训练的并行三件套,把&quot;高性能计算&quot;这层底子打扎实。 一、为什么需要分布式:单机瓶颈的三堵墙 算力墙 :单核主">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-09-06T00:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-06T00:00:00.000Z">
+<meta property="article:author" content="Nicole">
+<meta property="article:tag" content="tech-notes">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2025/09/06/hpc-distributed/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2025/09/06/hpc-distributed/","path":"2025/09/06/hpc-distributed/","title":"高性能与分布式计算:从 Spark 到分布式训练,算力是怎么"拧"出来的"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>高性能与分布式计算:从 Spark 到分布式训练,算力是怎么"拧"出来的 | Nicole’s Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3QwzBRtNFuLWLynR",ck:"3QwzBRtNFuLWLynR"})</script>
+
+<!-- refine.css (local test) -->
+<link rel="stylesheet" href="/css/refine.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Nicole’s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-playlist"><a href="/playlist/" rel="section"><i class="fa fa-music fa-fw"></i>playlist</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-research"><a href="/research/" rel="section"><i class="fa fa-bullseye fa-fw"></i>Focus</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E8%A7%84%E5%88%92%E6%96%B9%E6%A1%88"><span class="nav-number">1.</span> <span class="nav-text">集群规划方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E4%B8%80%EF%BC%9A%E8%AE%A4%E7%9F%A5%E7%96%86%E5%9C%9F%E4%B8%8E-AI-%E5%89%8D%E6%B2%BF%E6%8E%A2%E7%B4%A2-Cognition-AI-Frontier"><span class="nav-number">2.</span> <span class="nav-text">集群一：认知疆土与 AI 前沿探索 (Cognition &amp; AI Frontier)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E4%BA%8C%EF%BC%9A%E5%9C%BA%E6%99%AF%E5%8F%99%E4%BA%8B%E4%B8%8E%E6%84%9F%E5%AE%98%E5%AE%9E%E9%AA%8C%E5%AE%A4-Sensory-Lab-Media"><span class="nav-number">3.</span> <span class="nav-text">集群二：场景叙事与感官实验室 (Sensory Lab &amp; Media)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E4%B8%89%EF%BC%9A%E6%9E%81%E8%87%B4%E7%BA%AF%E5%87%80%E7%9A%84%E6%95%B0%E5%AD%97%E7%94%9F%E6%80%81-Pure-Digital-Ecosystem"><span class="nav-number">4.</span> <span class="nav-text">集群三：极致纯净的数字生态 (Pure Digital Ecosystem)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E7%BE%A4%E5%9B%9B%EF%BC%9A%E7%A4%BE%E4%BC%9A%E5%8D%8F%E4%BD%9C%E4%B8%8E%E4%BB%B7%E5%80%BC%E6%95%B4%E5%90%88-Social-Synthesis-Legacy"><span class="nav-number">5.</span> <span class="nav-text">集群四：社会协作与价值整合 (Social Synthesis &amp; Legacy)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%A4%87%E5%8A%9B%E9%87%8F%EF%BC%9A%E6%A0%B8%E5%BF%83%E7%94%9F%E5%91%BD%E5%8A%9B%E4%B8%8E%E4%BD%93%E8%83%BD%E5%9F%BA%E7%9F%B3-Vitality-Performance"><span class="nav-number">6.</span> <span class="nav-text">后备力量：核心生命力与体能基石 (Vitality &amp; Performance)</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nicole</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      
+      <span class="links-of-author-item">
+        <a href="mailto:nicolezkx@hotmail.com" title="E-Mail → mailto:nicolezkx@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/18/cluster-planning-scheme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nicole">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="集群规划方案 (Cluster Planning Scheme) | Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          高性能与分布式计算:从 Spark 到分布式训练,算力是怎么"拧"出来的</h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-09-06 00:00:00 / Modified: 00:00:00" itemprop="dateCreated datePublished" datetime="2025-09-06T00:00:00+08:00">2025-09-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>摘要:模型是&quot;喂&quot;出来的,算力是&quot;拧&quot;出来的。这篇从 Spark 的内存计算讲起,讲到分布式训练的并行三件套,把&quot;高性能计算&quot;这层底子打扎实。</blockquote>
+<hr>
+<h3>一、为什么需要分布式:单机瓶颈的三堵墙</h3>
+<ol><li><strong>算力墙</strong>:单核主频多年不涨,靠多核/多机并行;</li><li><strong>内存墙</strong>:数据放不进内存,必须分片;</li><li><strong>I/O 墙</strong>:磁盘太慢,必须减少落盘。</li></ol>
+<p>分布式系统的一切设计,本质都是在这三堵墙上&quot;打洞&quot;。</p>
+<h3>二、Spark 的答案:内存计算与粗粒度并行</h3>
+<p>Spark 的核心抽象 RDD(弹性分布式数据集)解决了两件事:</p>
+<ul><li><strong>内存优先</strong>:中间结果留在内存,避免 MapReduce 反复落盘的 I/O 墙;</li><li><strong>粗粒度并行</strong>:以分区为单位并行、以&quot;血缘&quot;为单位容错(重算而非复制)——用计算换存储。</li></ul>
+<p>我用 PySpark 做过分布式 TextRank(文本摘要)和 TextCNN(文本分类),最深的体会:<strong>Shuffle 是万恶之源</strong>——数据重排的代价往往超过计算本身,所以&quot;减少 Shuffle&quot;是 Spark 调优第一课。</p>
+<h3>三、从数据并行到分布式训练</h3>
+<p>大模型时代,分布式的对象从&quot;数据&quot;变成了&quot;模型&quot;:</p>
+<ul><li><strong>数据并行</strong>:每卡一份模型、分数据,梯度 all-reduce 同步(ZeRO 系列在此基础上把参数/梯度/优化器状态分片,省显存);</li><li><strong>张量并行</strong>:单层权重切到多卡,适合单卡放不下的大层;</li><li><strong>流水线并行</strong>:按层切分,卡间流水,适合层数极深。</li></ul>
+<p>我的实践中,DeepSpeed ZeRO-3 支撑了 32B 级模型的分布式训练——<strong>优化器状态往往比模型本身还占显存</strong>,这是刚接触分布式训练的人最容易忽略的。</p>
+<h3>四、高性能的三条心法</h3>
+<ol><li><strong>先 profiling,再优化</strong>:不测不优,瓶颈往往不在你以为的地方;</li><li><strong>减少数据移动</strong>:内存 &gt; 磁盘 &gt; 网络,能缓存的绝不重算;</li><li><strong>并行是有代价的</strong>:通信开销、负载不均——小规模问题用分布式反而是负优化,选型要诚实。</li></ol>
+<hr>
+<p>*参考来源(书签收藏):High Performance Spark(O&#x27;Reilly)、PySpark 笔记、&quot;spark数思&quot;系列;本文为个人工程实践梳理。*</p>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/tech-notes/" rel="tag"># tech-notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/04/29/ros-turtlebot3-readme/" rel="prev" title="ROS系列项目 —— TurtleBot3 扩写版README">
+                  <i class="fa fa-angle-left"></i> ROS系列项目 —— TurtleBot3 扩写版README
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Nicole</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"nicolezkx1025","repo":"nicolezkx1025.github.io","client_id":"Ov23ctP4pxy8WwWFPWKk","client_secret":"6ba766934ca018b2267b91ec34efa1c75f9c2e91","admin_user":"nicolezkx1025","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"830f49f85a61a627330af540f6996977"}</script>
+<script src="/js/third-party/comments/gitalk.js" defer></script>
+
+    <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+  <div id="spotify-player" style="position: fixed; left: 20px; bottom: 20px; z-index: 999999;">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZSEZuA8pMrb?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</body>
+</html>
