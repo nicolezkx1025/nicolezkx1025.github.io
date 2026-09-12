@@ -78,14 +78,58 @@ h1, h2, h3, h4, h5, h6 {
 .post-body a { color: #111; border-bottom: 1px solid #c9c9c9; }
 .post-body a:hover { color: #000; border-bottom-color: #555; }
 
-/* 表格：只用横线 */
-.post-body table { border-collapse: collapse; font-size: .94em; }
-.post-body table th, .post-body table td {
-  border: 0;
-  border-bottom: 1px solid #e2e2e2;
-  padding: 7px 10px;
+/* 表格：浅色系写死，不受系统深色模式影响（本站可见界面始终是浅色照片底） */
+.tbl {
+  margin: 22px 0;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  overflow: hidden;          /* 让圆角真正裁切到表格角落 */
+  background: #fff;
 }
-.post-body table th { font-weight: 400; color: #444; }
+.post-body .tbl table {
+  margin: 0;
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  font-size: .92em;
+  line-height: 1.75;
+  background: #fff;
+}
+.post-body .tbl th {
+  background: #f4f1fd;
+  color: #241f38;
+  font-weight: 400;
+  letter-spacing: .02em;
+  text-align: left;
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #e2dcf5;
+}
+.post-body .tbl td {
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #f1eef9;
+  color: #1f1f1f;
+  vertical-align: top;
+}
+/* 覆盖主题的深色斑马纹变量，任何系统主题下都保持浅色 */
+.post-body .tbl tbody tr:nth-of-type(odd) { background: #fff; }
+.post-body .tbl tbody tr:nth-of-type(even) { background: #fbfaff; }
+.post-body .tbl tbody tr:hover { background: #f7f4fe; }
+.post-body .tbl tbody tr:last-child td { border-bottom: 0; }
+.post-body .tbl td:first-child { color: #241f38; }
+.post-body .tbl td strong { color: #111; }
+/* 兜底：万一某处表格没被 .tbl 包住，也不要出现深色行 */
+.post-body table { background: #fff; }
+.post-body tbody tr:nth-of-type(odd),
+.post-body tbody tr:nth-of-type(even) { background: #fff; }
+.post-body th { background: #f4f1fd; color: #241f38; font-weight: 400; }
+.post-body th, .post-body td { border: 0; border-bottom: 1px solid #f1eef9; padding: 10px 13px; }
+@media (max-width: 767px) {
+  .post-body .tbl { border-radius: 8px; }
+  .post-body .tbl th, .post-body .tbl td { padding: 9px 10px; font-size: .95em; }
+}
+
 
 /* ---------- 4. 元信息：等宽、字距、字色回到 #666（原站值） ---------------- */
 .post-meta, .post-meta a {
@@ -198,3 +242,51 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 .post-header .rs-more a { color: #333; border-bottom: 1px solid #ccc; }
+
+/* ---------- 8. 文章内的「邮件索取」闸门（核心章节加密） ------------------- */
+.gate-box {
+  background: #faf9ff;
+  border: 1px solid #e6e1f8;
+  border-left: 3px solid #cbbff0;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 26px 0;
+}
+.gate-box .gate-tag {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: #7a6ba8;
+  text-transform: uppercase;
+}
+.gate-box h3 { margin: 10px 0 10px !important; font-size: 1.02em; }
+.gate-box p { margin: 10px 0; color: #1f1f1f; }
+.gate-box ul { margin: 10px 0; padding-left: 22px; }
+.gate-box li { margin: 7px 0; color: #1f1f1f; }
+.gate-form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.gate-form input {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 13px;
+  padding: 7px 11px;
+  border: 1px solid #ddd6f3;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  min-width: 210px;
+}
+.gate-form button {
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: .02em;
+  padding: 7px 18px;
+  border: 1px solid #cbbff0;
+  border-radius: 6px;
+  background: #efe9fd;
+  color: #33285e;
+  cursor: pointer;
+}
+.gate-form button:hover { background: #e6dcfc; }
+.gate-msg { font-size: 12.5px; color: #8a2b2b; margin-top: 9px; min-height: 18px; }
+.gate-msg.ok { color: #2f6b3f; }
+.gate-content { margin-top: 4px; }
+
