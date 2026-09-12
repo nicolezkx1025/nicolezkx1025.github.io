@@ -69,6 +69,9 @@
   </noscript>
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"3QwzBRtNFuLWLynR",ck:"3QwzBRtNFuLWLynR"})</script>
+
+<!-- refine.css (local test) -->
+<link rel="stylesheet" href="/css/refine.css">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -105,7 +108,7 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-playlist"><a href="/playlist/" rel="section"><i class="fa fa-music fa-fw"></i>playlist</a></li><li class="menu-item menu-item-resume"><a href="/resume/" rel="section"><i class="fa fa-file-text fa-fw"></i>Resume</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
-      <li class="menu-item menu-item-research"><a href="/research/" rel="section"><i class="fa fa-flask fa-fw"></i>Research</a></li>
+      <li class="menu-item menu-item-research"><a href="/research/" rel="section"><i class="fa fa-bullseye fa-fw"></i>Focus</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -220,16 +223,93 @@
     </div>
   </article>
 </div>
-<div class="post-block research-hero" style="background:linear-gradient(135deg,#f5f3ff,#faf5ff);border:1px solid #ddd6fe;border-radius:12px;margin-bottom:18px;">
+<div class="post-block focus-card">
   <article class="post-content" lang="">
     <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">研究兴趣</h2>
+      <h2 class="post-title" itemprop="name headline">关注的问题<span class="fc-flag">Focus</span></h2>
     </header>
     <div class="post-body" itemprop="articleBody">
-      <p style="font-size:15px;font-weight:bold;margin:6px 0;">可信持续智能 · 隐状态表示 · 不确定性量化 · 世界模型 · 自主智能体</p>
-      <p style="margin:6px 0;">我长期关注的问题只有一个：智能系统如何表示、理解和运用世界。</p>
-      <p style="margin:6px 0;"><a href="/research/" style="font-weight:bold;">查看研究兴趣 →</a></p>
+      <p class="fc-lead">让智能系统在真实世界里，<em>可靠地长期运行</em>。</p>
+      <div class="fc-row">
+        <div class="fc-lead-col">退化条件下的可信度</div>
+        <div>传感器退化、分布漂移时，估计与策略还值不值得信
+          <div class="fc-chips"><span class="fc-chip">不确定性量化</span><span class="fc-chip">失效识别</span><span class="fc-chip">降级与回滚</span></div>
+        </div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-lead-col">从感知到决策的闭环</div>
+        <div>把状态估计、在线自适应与动作接成一条可信链路
+          <div class="fc-chips"><span class="fc-chip">状态估计</span><span class="fc-chip">在线自适应</span><span class="fc-chip">世界模型</span><span class="fc-chip">端到端集成</span></div>
+        </div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-lead-col">智能体的工程闭环</div>
+        <div>数据、训练、评测、部署 —— 让能力按轮次累积
+          <div class="fc-chips"><span class="fc-chip">Agent 编排</span><span class="fc-chip">RLHF-PPO</span><span class="fc-chip">评测闭环</span><span class="fc-chip">数据飞轮</span></div>
+        </div>
+      </div>
+      <div class="fc-row">
+        <div class="fc-lead-col">训练与推理基础设施</div>
+        <div>训练／推理链路的工程实现与优化
+          <div class="fc-chips"><span class="fc-chip">DeepSpeed</span><span class="fc-chip">vLLM 推理加速</span><span class="fc-chip">响应 &lt;2s</span></div>
+        </div>
+      </div>
+      <div class="fc-facts">
+        5 项发明专利（其中 2 项为第一发明人）· 复杂表格重建 97% / 94%<br>
+        <span class="fc-mono">端到端延迟 &lt;2s · 100+ 并发 · 监管报送零延误</span>
+      </div>
+      <div class="fc-entries">
+        <a href="/research/">研究方向 →</a>
+        <a href="/resume/">项目与简历 →</a>
+      </div>
     </div>
+  </article>
+</div>
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/09/13/mirror-self-recognition/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nicole">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/09/13/mirror-self-recognition/" class="post-title-link" itemprop="url">这次偏移是我还是世界:镜像自我认知测试下的 TTT 与 RSI</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      <time title="Created: 2026-09-13 00:00:00" itemprop="dateCreated datePublished" datetime="2026-09-13T00:00:00+08:00">2026-09-13</time>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    <div class="post-body" itemprop="articleBody"><p>TTT 和 RSI,哪个能通过镜像自我认知测试?这个问题最初像玩笑,但它把两者的失效方式说清楚了:短环问"这次偏移是我还是世界",长环问"这次进步是真的还是我在自欺"——而控制界四十年前就在处理同一个问题。</p>
+<p><a href="/2026/09/13/mirror-self-recognition/">阅读全文 →</a></p>
+
+    </div>
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 </div>
 <div class="post-block">
