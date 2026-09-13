@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1180" height="820" fill="#ffffff"/>
+<text x="96" y="40" font-size="22" font-weight="700" fill="#1a1a1a">方向地图:我做过什么,在哪里</text>
+<text x="96" y="64" font-size="12.5" fill="#666">横轴 = 可验证性　纵轴 = 与物理世界的耦合　　实心点 = 已有公开可查的产出</text>
+<text x="96" y="90" font-size="13" font-weight="600" fill="#c0392b">近两年重心:可验证的 AI 系统 + 不确定性;金融与具身是下一段要补的。</text>
+<circle cx="231.7" cy="654.1" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+<text x="241.7" y="646.1" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">搜广推 / 推荐排序</text>
+<circle cx="263.0" cy="697.2" r="5.0" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+<text x="273.0" y="711.2" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">CTR / CVR 建模</text>
+<circle cx="367.4" cy="666.4" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="367.4" cy="666.4" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
+<text x="379.4" y="682.4" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">NLP / 文档理解</text>
+<circle cx="388.3" cy="604.8" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="388.3" cy="604.8" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
+<text x="400.3" y="590.8" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">多模态理解</text>
+<circle cx="492.7" cy="604.8" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="492.7" cy="604.8" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
+<text x="504.7" y="594.8" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">RAG / Agent</text>
+<circle cx="471.8" cy="654.1" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+<text x="321.8" y="670.1" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">大模型对齐 RLHF</text>
+<circle cx="419.6" cy="629.4" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="419.6" cy="629.4" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
+<text x="259.6" y="615.4" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="end">模型评测 / 校准</text>
+<circle cx="294.4" cy="703.4" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+<text x="124.4" y="719.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">数据治理 / 数据质量</text>
+<circle cx="315.2" cy="567.8" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+<text x="125.2" y="551.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">计算机视觉 / 实例分割</text>
+<circle cx="409.2" cy="691.0" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+<text x="259.2" y="717.0" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">语音 / TTS / STT</text>
+<circle cx="576.2" cy="272.2" r="8.5" fill="#2e8b57" stroke="#2e8b57" stroke-width="2.2"/>
+<circle cx="576.2" cy="272.2" r="13.5" fill="none" stroke="#2e8b57" stroke-opacity="0.25"/>
+<text x="588.2" y="260.2" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">状态估计 / 多传感器融合</text>
+<circle cx="638.9" cy="173.6" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
+<text x="650.9" y="165.6" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">具身智能 / 机器人学习</text>
+<circle cx="618.0" cy="130.5" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
+<text x="630.0" y="146.5" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">空中作业 / 飞行机器人</text>
+<circle cx="722.4" cy="284.5" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
+<text x="532.4" y="272.5" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">世界模型 / 持续智能</text>
+<circle cx="555.4" cy="358.4" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
+<text x="375.4" y="376.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">仿真 / 真机实验平台</text>
+<circle cx="1035.6" cy="666.4" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
+<text x="1047.6" y="654.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">量化因子研究</text>
+<circle cx="993.8" cy="703.4" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
+<text x="1005.8" y="719.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">期权 / 衍生品定价</text>
+<circle cx="868.6" cy="641.8" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
+<text x="668.6" y="627.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">非结构化数据 → 因子</text>
+<circle cx="931.2" cy="530.9" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
+<text x="943.2" y="542.9" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">低延迟交易系统</text>
+<circle cx="1014.7" cy="604.8" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
+<text x="1026.7" y="590.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">风险与组合构建</text>
+<circle cx="409.2" cy="543.2" r="13" fill="#e8534a" fill-opacity="0.16"/>
+<circle cx="409.2" cy="543.2" r="7.5" fill="#e8534a" stroke="#ffffff" stroke-width="2.5"/>
+<text x="425.2" y="547.2" font-size="13.5" font-weight="700" fill="#c0392b">我的重心</text>
+<line x1="96" y1="728" x2="1140" y2="728" stroke="#333" stroke-width="1.4"/>
+<line x1="96" y1="112" x2="96" y2="728" stroke="#333" stroke-width="1.4"/>
+<text x="618" y="762" text-anchor="middle" font-size="12.5" fill="#444">可验证性 →　（左:离线指标清晰　·　右:只能靠真实盈亏/长期结果验证）</text>
+<text x="26" y="420" font-size="12.5" fill="#444" text-anchor="middle" transform="rotate(-90 26 420)">与物理世界的耦合 →　（下:纯数字　·　上:具身/实时系统）</text>
+<rect x="98" y="642" width="430" height="72" rx="8" fill="#fbfbfb" stroke="#ececec"/>
+<text x="108" y="658" font-size="11.5" fill="#666">圆点 = 该方向;实心+外环 = 已有公开产出　空心粗边 = 有生产经验未公开　空心细边 = 尚未进入</text>
+<circle cx="108" cy="682" r="6" fill="#2f6fb0"/>
+<text x="120" y="686" font-size="12" fill="#444">AI·数字</text>
+<circle cx="236" cy="682" r="6" fill="#2e8b57"/>
+<text x="248" y="686" font-size="12" fill="#444">AI·具身</text>
+<circle cx="364" cy="682" r="6" fill="#8e44ad"/>
+<text x="376" y="686" font-size="12" fill="#444">金融</text>
+<text x="1140" y="804" font-size="11" fill="#aaa" text-anchor="end">坐标为定性定位,非定量测量;仅标注已有公开产出的方向</text>
+</svg>
