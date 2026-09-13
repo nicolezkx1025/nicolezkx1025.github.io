@@ -1,86 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans SC','Microsoft YaHei',sans-serif">
-<rect width="1180" height="820" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="900" viewBox="0 0 1180 900" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1180" height="900" fill="#ffffff"/>
 <text x="96" y="40" font-size="22" font-weight="700" fill="#1a1a1a">方向地图:我做过什么,以及往哪里走</text>
 <text x="96" y="64" font-size="12.5" fill="#666">横轴 = 可验证性(左:离线指标清晰 · 右:只能靠真实盈亏验证)　纵轴 = 与物理世界的耦合(下:纯数字 · 上:具身/实时系统)</text>
 <text x="96" y="90" font-size="13" font-weight="600" fill="#c0392b">主线:低信噪比与退化条件下的可信系统 —— 状态估计 / 不确定性 / 评测闭环,能力可迁移至无人系统与量化研究。</text>
-<text x="96" y="126" font-size="11.5" fill="#666">● 已有公开产出(仓库或文章)　◐ 有真实经验(生产/实验,未公开)　○ 尚未进入　虚线箭头 = 能力可迁移方向(意图,非战绩)</text>
-<text x="96" y="148" font-size="11.5" fill="#666">红点 = 我的位置(按公开产出 + 生产经验 + 可迁移能力综合定位)　类别:</text>
-<circle cx="497.8" cy="144" r="5.5" fill="#2f6fb0"/>
-<text x="507.8" y="148" font-size="11.5" fill="#444">AI·数字</text>
-<circle cx="576.1" cy="144" r="5.5" fill="#2e8b57"/>
-<text x="586.1" y="148" font-size="11.5" fill="#444">AI·具身</text>
-<circle cx="654.4" cy="144" r="5.5" fill="#8e44ad"/>
-<text x="664.4" y="148" font-size="11.5" fill="#444">金融</text>
-<text x="1140" y="804" font-size="11" fill="#aaa" text-anchor="end">坐标为定性定位,看相对位置不看绝对距离;空心点也代表真实做过的经验,只是没有公开产出</text>
-<line x1="96" y1="728" x2="1140" y2="728" stroke="#333" stroke-width="1.4"/>
-<line x1="96" y1="176" x2="96" y2="728" stroke="#333" stroke-width="1.4"/>
-<text x="618" y="762" text-anchor="middle" font-size="12.5" fill="#444">可验证性 →　(左:离线指标清晰　·　右:只能靠真实盈亏/长期结果验证)</text>
-<text x="26" y="452" font-size="12.5" fill="#444" text-anchor="middle" transform="rotate(-90 26 452)">与物理世界的耦合 →　(下:纯数字　·　上:具身/实时系统)</text>
-<circle cx="231.7" cy="661.8" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="263.0" cy="700.4" r="5.0" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="367.4" cy="672.8" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
-<circle cx="367.4" cy="672.8" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
-<circle cx="388.3" cy="617.6" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
-<circle cx="388.3" cy="617.6" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
-<circle cx="492.7" cy="617.6" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
-<circle cx="492.7" cy="617.6" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
-<circle cx="555.4" cy="562.4" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="471.8" cy="661.8" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="419.6" cy="639.7" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
-<circle cx="419.6" cy="639.7" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
-<circle cx="294.4" cy="678.3" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="315.2" cy="584.5" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="409.2" cy="694.9" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="200.4" cy="606.6" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
-<circle cx="200.4" cy="606.6" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
-<circle cx="576.2" cy="319.5" r="8.5" fill="#2e8b57" stroke="#2e8b57" stroke-width="2.2"/>
-<circle cx="576.2" cy="319.5" r="13.5" fill="none" stroke="#2e8b57" stroke-opacity="0.25"/>
-<circle cx="638.9" cy="231.2" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
-<circle cx="618.0" cy="192.6" r="6.5" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
-<circle cx="743.3" cy="363.7" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
-<circle cx="722.4" cy="330.6" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
-<circle cx="555.4" cy="396.8" r="6.5" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
-<circle cx="513.6" cy="253.3" r="6.5" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
-<circle cx="1035.6" cy="672.8" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
-<circle cx="993.8" cy="705.9" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
-<circle cx="868.6" cy="650.7" r="6.5" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
-<circle cx="931.2" cy="551.4" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
-<circle cx="952.1" cy="617.6" r="6.5" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
-<circle cx="1014.7" cy="573.4" r="5.0" fill="#ffffff" stroke="#8e44ad" stroke-width="1.6"/>
-<circle cx="722.4" cy="474.1" r="13" fill="#e8534a" fill-opacity="0.16"/>
-<circle cx="722.4" cy="474.1" r="7.5" fill="#e8534a" stroke="#ffffff" stroke-width="2.5"/>
-<path d="M 722.4 474.1 Q 678.6 454.6 618.0 231.2" fill="none" stroke="#e8534a" stroke-width="2" stroke-dasharray="7 6" stroke-opacity="0.55"/>
-<line x1="618.0" y1="231.2" x2="626.2" y2="241.3" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
-<line x1="618.0" y1="231.2" x2="616.0" y2="244.0" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
-<path d="M 722.4 474.1 Q 792.6 488.2 889.4 650.7" fill="none" stroke="#e8534a" stroke-width="2" stroke-dasharray="7 6" stroke-opacity="0.55"/>
-<line x1="889.4" y1="650.7" x2="878.8" y2="643.2" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
-<line x1="889.4" y1="650.7" x2="887.9" y2="637.8" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
-<text x="645.0" y="424.0" font-size="11.5" fill="#c0392b" font-weight="600" text-anchor="end">可迁移:状态估计 / 真机部署 · 空中飞行器</text>
-<text x="795.0" y="519.0" font-size="11.5" fill="#c0392b" font-weight="600" text-anchor="start">可迁移:低信噪比下的统计判断 → 量化 / 风控</text>
-<text x="738.4" y="478.1" font-size="13.5" font-weight="700" fill="#c0392b">我的位置</text>
-<text x="355.4" y="658.8" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="end">NLP / 文档理解</text>
-<text x="400.3" y="621.6" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">多模态理解</text>
-<text x="504.7" y="621.6" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">RAG / Agent</text>
-<text x="431.6" y="643.7" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">模型评测 / 校准</text>
-<text x="212.4" y="610.6" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">后量子密码 / 密码学</text>
-<text x="564.2" y="323.5" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="end">状态估计 / 多传感器融合</text>
-<text x="219.7" y="665.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">搜广推 / 推荐排序</text>
-<text x="567.4" y="566.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">强化学习 / 序贯决策</text>
-<text x="483.8" y="665.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">大模型对齐 RLHF</text>
-<text x="282.4" y="682.3" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">数据治理 / 数据质量</text>
-<text x="327.2" y="588.5" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">计算机视觉 / 实例分割</text>
-<text x="421.2" y="698.9" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">语音 / TTS / STT</text>
-<text x="630.0" y="196.6" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">空中作业 / 飞行机器人</text>
-<text x="567.4" y="400.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">仿真 / 真机实验平台</text>
-<text x="525.6" y="257.3" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">四旋翼 / 嵌入式控制</text>
-<text x="880.6" y="654.7" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">非结构化数据 → 量化指标</text>
-<text x="964.1" y="621.6" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">风险指标建模</text>
-<text x="275.0" y="704.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">CTR / CVR 建模</text>
-<text x="650.9" y="235.2" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">具身智能 / 机器人学习</text>
-<text x="755.3" y="367.7" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">自动驾驶(感知/规控)</text>
-<text x="734.4" y="334.6" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">世界模型 / 持续智能</text>
-<text x="1047.6" y="676.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">量化因子研究</text>
-<text x="1005.8" y="709.9" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">期权 / 衍生品定价</text>
-<text x="943.2" y="555.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">低延迟交易系统</text>
-<text x="1026.7" y="577.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">组合构建 / 实盘</text>
+<text x="96" y="128" font-size="11.5" fill="#666">● 已有公开产出 10 个　◐ 真实做过的经验 14 个(生产/实验,未公开)　○ 尚未进入 8 个　虚线箭头 = 能力可迁移方向(意图,非战绩)</text>
+<text x="96" y="150" font-size="11.5" fill="#666">红点 = 我的位置(按公开产出 + 生产经验 + 可迁移能力综合定位)　类别:</text>
+<circle cx="497.8" cy="146" r="5.5" fill="#2f6fb0"/>
+<text x="507.8" y="150" font-size="11.5" fill="#444">AI·数字</text>
+<circle cx="576.1" cy="146" r="5.5" fill="#2e8b57"/>
+<text x="586.1" y="150" font-size="11.5" fill="#444">AI·具身</text>
+<circle cx="654.4" cy="146" r="5.5" fill="#8e44ad"/>
+<text x="664.4" y="150" font-size="11.5" fill="#444">金融</text>
+<text x="1140" y="884" font-size="11" fill="#aaa" text-anchor="end">圆心 = 该方向;● 实心 = 有公开产出　◐ 半亮 = 做过但没公开　○ 淡圈 = 还没进入。坐标为定性定位,远近是位置不是评分</text>
+<line x1="96" y1="804" x2="1140" y2="804" stroke="#333" stroke-width="1.4"/>
+<line x1="96" y1="186" x2="96" y2="804" stroke="#333" stroke-width="1.4"/>
+<text x="618" y="840" text-anchor="middle" font-size="12.5" fill="#444">可验证性 →　(左:离线指标清晰　·　右:只能靠真实盈亏/长期结果验证)</text>
+<text x="26" y="495" font-size="12.5" fill="#444" text-anchor="middle" transform="rotate(-90 26 495)">与物理世界的耦合 →　(下:纯数字　·　上:具身/实时系统)</text>
+<circle cx="231.7" cy="729.8" r="8.0" fill="#2f6fb0" fill-opacity="0.45" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="263.0" cy="773.1" r="5.5" fill="#ffffff" stroke="#2f6fb0" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="367.4" cy="742.2" r="14.0" fill="none" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<circle cx="367.4" cy="742.2" r="9.0" fill="#2f6fb0" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="388.3" cy="680.4" r="14.0" fill="none" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<circle cx="388.3" cy="680.4" r="9.0" fill="#2f6fb0" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="492.7" cy="680.4" r="14.0" fill="none" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<circle cx="492.7" cy="680.4" r="9.0" fill="#2f6fb0" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="555.4" cy="618.6" r="8.0" fill="#2f6fb0" fill-opacity="0.45" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="471.8" cy="729.8" r="8.0" fill="#2f6fb0" fill-opacity="0.45" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="419.6" cy="705.1" r="14.0" fill="none" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<circle cx="419.6" cy="705.1" r="9.0" fill="#2f6fb0" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="294.4" cy="748.4" r="8.0" fill="#2f6fb0" fill-opacity="0.45" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="315.2" cy="643.3" r="14.0" fill="none" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<circle cx="315.2" cy="643.3" r="9.0" fill="#2f6fb0" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="409.2" cy="766.9" r="8.0" fill="#2f6fb0" fill-opacity="0.45" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="200.4" cy="668.0" r="14.0" fill="none" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<circle cx="200.4" cy="668.0" r="9.0" fill="#2f6fb0" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="576.2" cy="334.3" r="14.0" fill="none" stroke="#2e8b57" stroke-opacity="0.28"/>
+<circle cx="576.2" cy="334.3" r="9.0" fill="#2e8b57" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="659.8" cy="408.5" r="14.0" fill="none" stroke="#2e8b57" stroke-opacity="0.28"/>
+<circle cx="659.8" cy="408.5" r="9.0" fill="#2e8b57" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="409.2" cy="495.0" r="14.0" fill="none" stroke="#2e8b57" stroke-opacity="0.28"/>
+<circle cx="409.2" cy="495.0" r="9.0" fill="#2e8b57" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="534.5" cy="433.2" r="8.0" fill="#2e8b57" fill-opacity="0.45" stroke="#2e8b57" stroke-width="2.2"/>
+<circle cx="513.6" cy="260.2" r="8.0" fill="#2e8b57" fill-opacity="0.45" stroke="#2e8b57" stroke-width="2.2"/>
+<circle cx="618.0" cy="204.5" r="8.0" fill="#2e8b57" fill-opacity="0.45" stroke="#2e8b57" stroke-width="2.2"/>
+<circle cx="367.4" cy="359.0" r="8.0" fill="#2e8b57" fill-opacity="0.45" stroke="#2e8b57" stroke-width="2.2"/>
+<circle cx="659.8" cy="235.4" r="5.5" fill="#ffffff" stroke="#2e8b57" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="764.2" cy="383.8" r="5.5" fill="#ffffff" stroke="#2e8b57" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="743.3" cy="334.3" r="5.5" fill="#ffffff" stroke="#2e8b57" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="701.5" cy="717.5" r="8.0" fill="#8e44ad" fill-opacity="0.45" stroke="#8e44ad" stroke-width="2.2"/>
+<circle cx="785.0" cy="766.9" r="8.0" fill="#8e44ad" fill-opacity="0.45" stroke="#8e44ad" stroke-width="2.2"/>
+<circle cx="847.7" cy="655.7" r="8.0" fill="#8e44ad" fill-opacity="0.45" stroke="#8e44ad" stroke-width="2.2"/>
+<circle cx="805.9" cy="581.5" r="8.0" fill="#8e44ad" fill-opacity="0.45" stroke="#8e44ad" stroke-width="2.2"/>
+<circle cx="931.2" cy="717.5" r="8.0" fill="#8e44ad" fill-opacity="0.45" stroke="#8e44ad" stroke-width="2.2"/>
+<circle cx="743.3" cy="680.4" r="14.0" fill="none" stroke="#8e44ad" stroke-opacity="0.28"/>
+<circle cx="743.3" cy="680.4" r="9.0" fill="#8e44ad" stroke="#ffffff" stroke-width="1.6"/>
+<circle cx="1056.5" cy="742.2" r="5.5" fill="#ffffff" stroke="#8e44ad" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="1014.7" cy="779.3" r="5.5" fill="#ffffff" stroke="#8e44ad" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="973.0" cy="593.9" r="5.5" fill="#ffffff" stroke="#8e44ad" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="1035.6" cy="668.0" r="5.5" fill="#ffffff" stroke="#8e44ad" stroke-opacity="0.35" stroke-width="1.4"/>
+<circle cx="722.4" cy="519.7" r="13" fill="#e8534a" fill-opacity="0.16"/>
+<circle cx="722.4" cy="519.7" r="7.5" fill="#e8534a" stroke="#ffffff" stroke-width="2.5"/>
+<path d="M 722.4 519.7 Q 665.4 496.5 586.7 229.3" fill="none" stroke="#e8534a" stroke-width="2" stroke-dasharray="7 6" stroke-opacity="0.5"/>
+<line x1="586.7" y1="229.3" x2="595.1" y2="239.1" stroke="#e8534a" stroke-width="2" stroke-opacity="0.6"/>
+<line x1="586.7" y1="229.3" x2="584.9" y2="242.1" stroke="#e8534a" stroke-width="2" stroke-opacity="0.6"/>
+<path d="M 722.4 519.7 Q 775.0 536.5 847.7 729.8" fill="none" stroke="#e8534a" stroke-width="2" stroke-dasharray="7 6" stroke-opacity="0.5"/>
+<line x1="847.7" y1="729.8" x2="838.5" y2="720.6" stroke="#e8534a" stroke-width="2" stroke-opacity="0.6"/>
+<line x1="847.7" y1="729.8" x2="848.5" y2="716.9" stroke="#e8534a" stroke-width="2" stroke-opacity="0.6"/>
+<text x="639.1" y="410.4" font-size="11.5" fill="#c0392b" font-weight="600" text-anchor="end">可迁移:状态估计 / 真机部署 · 空中飞行器</text>
+<text x="774.3" y="595.6" font-size="11.5" fill="#c0392b" font-weight="600" text-anchor="end">可迁移:低信噪比下的统计判断 → 量化 / 风控</text>
+<text x="738.4" y="523.7" font-size="13.5" font-weight="700" fill="#c0392b">我的位置</text>
+<text x="355.4" y="728.2" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="end">NLP / 文档理解</text>
+<text x="400.3" y="684.4" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">多模态理解</text>
+<text x="504.7" y="684.4" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">RAG / Agent</text>
+<text x="431.6" y="709.1" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">模型评测 / 校准</text>
+<text x="327.2" y="647.3" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">计算机视觉 / 实例分割</text>
+<text x="212.4" y="672.0" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">后量子密码 / 密码学</text>
+<text x="588.2" y="338.3" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">状态估计 / 多传感器融合</text>
+<text x="671.8" y="412.5" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">退化 / 故障检测与可信度诊断</text>
+<text x="421.2" y="499.0" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">室内空间 / 平面图感知</text>
+<text x="755.3" y="684.4" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">审计 / 招股书文档结构化</text>
+<text x="219.7" y="733.8" font-size="12.5" font-weight="500" fill="#333" text-anchor="end">搜广推 / 推荐排序</text>
+<text x="567.4" y="622.6" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">强化学习 / 序贯决策</text>
+<text x="483.8" y="733.8" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">大模型对齐 RLHF</text>
+<text x="282.4" y="752.4" font-size="12.5" font-weight="500" fill="#333" text-anchor="end">数据治理 / 数据质量</text>
+<text x="421.2" y="770.9" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">语音 / TTS / STT</text>
+<text x="546.5" y="437.2" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">仿真 / 真机实验平台</text>
+<text x="525.6" y="264.2" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">四旋翼 / 嵌入式控制</text>
+<text x="630.0" y="208.5" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">空中作业 / 飞行机器人</text>
+<text x="379.4" y="363.0" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">嵌入式硬件 / 数字电路</text>
+<text x="713.5" y="721.5" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">金融数据全生命周期(DAP)</text>
+<text x="797.0" y="770.9" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">金融统计 / 债券与股权报表</text>
+<text x="859.7" y="659.7" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">资管 / 理财业务数据与指标</text>
+<text x="817.9" y="585.5" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">风险与收益指标建模</text>
+<text x="943.2" y="721.5" font-size="12.5" font-weight="500" fill="#333" text-anchor="start">强合规数据系统(零差错交付)</text>
+<text x="275.0" y="777.1" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">CTR / CVR 建模</text>
+<text x="671.8" y="239.4" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">具身智能 / 机器人学习</text>
+<text x="776.2" y="387.8" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">自动驾驶(感知/规控)</text>
+<text x="755.3" y="338.3" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">世界模型 / 持续智能</text>
+<text x="1068.5" y="746.2" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">量化因子研究</text>
+<text x="1026.7" y="783.3" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">期权 / 衍生品定价</text>
+<text x="985.0" y="597.9" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">低延迟交易系统</text>
+<text x="1047.6" y="672.0" font-size="12.5" font-weight="400" fill="#888" text-anchor="start">组合构建 / 实盘</text>
 </svg>
