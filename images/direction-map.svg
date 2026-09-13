@@ -3,7 +3,7 @@
 <text x="96" y="40" font-size="22" font-weight="700" fill="#1a1a1a">方向地图:我做过什么,以及往哪里走</text>
 <text x="96" y="64" font-size="12.5" fill="#666">横轴 = 可验证性(左:离线指标清晰 · 右:只能靠真实盈亏验证)　纵轴 = 与物理世界的耦合(下:纯数字 · 上:具身/实时系统)</text>
 <text x="96" y="90" font-size="13" font-weight="600" fill="#c0392b">主线:低信噪比与退化条件下的可信系统 —— 状态估计 / 不确定性 / 评测闭环,能力可迁移至无人系统与量化研究。</text>
-<text x="96" y="126" font-size="11.5" fill="#666">● 已有公开产出　◐ 有真实经验(生产/实验,未公开)　○ 尚未进入　虚线箭头 = 能力可迁移方向(意图,非战绩)</text>
+<text x="96" y="126" font-size="11.5" fill="#666">● 已有公开产出(仓库或文章)　◐ 有真实经验(生产/实验,未公开)　○ 尚未进入　虚线箭头 = 能力可迁移方向(意图,非战绩)</text>
 <text x="96" y="148" font-size="11.5" fill="#666">红点 = 我的位置(按公开产出 + 生产经验 + 可迁移能力综合定位)　类别:</text>
 <circle cx="497.8" cy="144" r="5.5" fill="#2f6fb0"/>
 <text x="507.8" y="148" font-size="11.5" fill="#444">AI·数字</text>
@@ -31,7 +31,8 @@
 <circle cx="294.4" cy="678.3" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
 <circle cx="315.2" cy="584.5" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
 <circle cx="409.2" cy="694.9" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
-<circle cx="200.4" cy="606.6" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
+<circle cx="200.4" cy="606.6" r="8.5" fill="#2f6fb0" stroke="#2f6fb0" stroke-width="2.2"/>
+<circle cx="200.4" cy="606.6" r="13.5" fill="none" stroke="#2f6fb0" stroke-opacity="0.25"/>
 <circle cx="576.2" cy="319.5" r="8.5" fill="#2e8b57" stroke="#2e8b57" stroke-width="2.2"/>
 <circle cx="576.2" cy="319.5" r="13.5" fill="none" stroke="#2e8b57" stroke-opacity="0.25"/>
 <circle cx="638.9" cy="231.2" r="5.0" fill="#ffffff" stroke="#2e8b57" stroke-width="1.6"/>
@@ -61,6 +62,7 @@
 <text x="400.3" y="621.6" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">多模态理解</text>
 <text x="504.7" y="621.6" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">RAG / Agent</text>
 <text x="431.6" y="643.7" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">模型评测 / 校准</text>
+<text x="212.4" y="610.6" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="start">后量子密码 / 密码学</text>
 <text x="564.2" y="323.5" font-size="12.5" font-weight="600" fill="#1a1a1a" text-anchor="end">状态估计 / 多传感器融合</text>
 <text x="219.7" y="665.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">搜广推 / 推荐排序</text>
 <text x="567.4" y="566.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">强化学习 / 序贯决策</text>
@@ -68,11 +70,10 @@
 <text x="282.4" y="682.3" font-size="12.5" font-weight="400" fill="#555" text-anchor="end">数据治理 / 数据质量</text>
 <text x="327.2" y="588.5" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">计算机视觉 / 实例分割</text>
 <text x="421.2" y="698.9" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">语音 / TTS / STT</text>
-<text x="212.4" y="610.6" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">后量子密码 / 密码学</text>
 <text x="630.0" y="196.6" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">空中作业 / 飞行机器人</text>
 <text x="567.4" y="400.8" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">仿真 / 真机实验平台</text>
 <text x="525.6" y="257.3" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">四旋翼 / 嵌入式控制</text>
-<text x="880.6" y="654.7" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">非结构化数据 → 因子</text>
+<text x="880.6" y="654.7" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">非结构化数据 → 量化指标</text>
 <text x="964.1" y="621.6" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">风险指标建模</text>
 <text x="275.0" y="704.4" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">CTR / CVR 建模</text>
 <text x="650.9" y="235.2" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">具身智能 / 机器人学习</text>
