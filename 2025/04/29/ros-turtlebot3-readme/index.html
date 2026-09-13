@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="TurtleBot3 ROS package 的主要功能和核心组件：主要功能： TurtleBot3 是一个小型、低成本、可编程的移动机器人平台 它提供了完整的 ROS（机器人操作系统）集成支持 主要用于教育、研究和开发目的  核心功能包（Packages）： turtlebot3_node：核心功能节点，负责机器人的基本控制和状态管理     点击这里查看 turtlebot3_node 详细信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROS系列项目 —— TurtleBot3 扩写版README">
+<meta property="og:url" content="http://example.com/2025/04/29/ros-turtlebot3-readme/index.html">
+<meta property="og:site_name" content="Nicole’s Blog">
+<meta property="og:description" content="TurtleBot3 ROS package 的主要功能和核心组件：主要功能： TurtleBot3 是一个小型、低成本、可编程的移动机器人平台 它提供了完整的 ROS（机器人操作系统）集成支持 主要用于教育、研究和开发目的  核心功能包（Packages）： turtlebot3_node：核心功能节点，负责机器人的基本控制和状态管理     点击这里查看 turtlebot3_node 详细信">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-04-29T09:36:07.000Z">
+<meta property="article:modified_time" content="2026-01-18T09:17:09.251Z">
+<meta property="article:author" content="Nicole">
+<meta property="article:tag" content="tech_notes">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2025/04/29/ros-turtlebot3-readme/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2025/04/29/ros-turtlebot3-readme/","path":"2025/04/29/ros-turtlebot3-readme/","title":"ROS系列项目 —— TurtleBot3 扩写版README"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>ROS系列项目 —— TurtleBot3 扩写版README | Nicole’s Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3QwzBRtNFuLWLynR",ck:"3QwzBRtNFuLWLynR"})</script>
+
+<!-- refine.css (local test) -->
+<link rel="stylesheet" href="/css/refine.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Nicole’s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-playlist"><a href="/playlist/" rel="section"><i class="fa fa-music fa-fw"></i>playlist</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-research"><a href="/research/" rel="section"><i class="fa fa-bullseye fa-fw"></i>Focus</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TurtleBot3-ROS-package-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E5%92%8C%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">TurtleBot3 ROS package 的主要功能和核心组件：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">主要功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E5%8C%85%EF%BC%88Packages%EF%BC%89%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">核心功能包（Packages）：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">主要特点：</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nicole</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      
+      <span class="links-of-author-item">
+        <a href="mailto:nicolezkx@hotmail.com" title="E-Mail → mailto:nicolezkx@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/04/29/ros-turtlebot3-readme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nicole">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="ROS系列项目 —— TurtleBot3 扩写版README | Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ROS系列项目 —— TurtleBot3 扩写版README
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-04-29 17:36:07" itemprop="dateCreated datePublished" datetime="2025-04-29T17:36:07+08:00">2025-04-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-01-18 17:17:09" itemprop="dateModified" datetime="2026-01-18T17:17:09+08:00">2026-01-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="TurtleBot3-ROS-package-的主要功能和核心组件："><a href="#TurtleBot3-ROS-package-的主要功能和核心组件：" class="headerlink" title="TurtleBot3 ROS package 的主要功能和核心组件："></a>TurtleBot3 ROS package 的<strong>主要功能</strong>和<strong>核心组件</strong>：</h1><h3 id="主要功能："><a href="#主要功能：" class="headerlink" title="主要功能："></a>主要功能：</h3><ol>
+<li>TurtleBot3 是一个小型、低成本、可编程的移动机器人平台</li>
+<li>它提供了完整的 ROS（机器人操作系统）集成支持</li>
+<li>主要用于教育、研究和开发目的</li>
+</ol>
+<h3 id="核心功能包（Packages）："><a href="#核心功能包（Packages）：" class="headerlink" title="核心功能包（Packages）："></a>核心功能包（Packages）：</h3><ol>
+<li><p><code>turtlebot3_node</code>：核心功能节点，负责机器人的基本控制和状态管理</p>
+ <details> 
+ <summary>点击这里查看 <i><b>turtlebot3_node</b></i> 详细信息</summary>
+ <br>
+ <i><b>turtlebot3_node</b></i> 的<b>主要功能</b>和<b>核心节点</b>：
+ 
+<p> <b>► 主要功能</b>：</p>
+<ol>
+<li>作为 TurtleBot3 机器人的核心控制节点</li>
+<li>负责与硬件（OpenCR 控制器）的通信</li>
+<li>实现机器人的基本运动控制 and 传感器数据处理</li>
+<li>提供里程计（Odometry）信息</li>
+<li>管理机器人的状态和配置</li>
+</ol>
+<p> <b>► 核心节点和组件</b>：</p>
+<ol>
+<li><p>主节点（TurtleBot3）：</p>
+<ul>
+<li>位于 <code>turtlebot3.cpp</code></li>
+<li>负责初始化机器人系统</li>
+<li>管理硬件通信</li>
+<li>处理传感器数据</li>
+<li>发布机器人状态信息</li>
+</ul>
+</li>
+<li><p>差速驱动控制器（DiffDriveController）：</p>
+<ul>
+<li>位于 <code>diff_drive_controller.cpp</code></li>
+<li>实现差速驱动控制</li>
+<li>处理速度命令</li>
+<li>计算轮子转速</li>
+</ul>
+</li>
+<li><p>里程计节点（Odometry）：</p>
+<ul>
+<li>位于 <code>odometry.cpp</code></li>
+<li>计算和发布机器人的位置和姿态信息</li>
+<li>基于编码器数据计算运动学信息</li>
+</ul>
+</li>
+<li><p>DYNAMIXEL SDK 封装：</p>
+<ul>
+<li>位于 <code>dynamixel_sdk_wrapper.cpp</code></li>
+<li>提供与 DYNAMIXEL 电机通信的接口</li>
+<li>处理电机控制和状态反馈</li>
+</ul>
+</li>
+<li><p>传感器处理：</p>
+<ul>
+<li>位于 <code>sensors/</code> 目录</li>
+<li>处理各种传感器数据（如 IMU、激光雷达等）</li>
+<li>提供传感器数据接口</li>
+</ul>
+</li>
+</ol>
+<p> <b>► 主要通信接口</b>：</p>
+<ol>
+<li><p>订阅：</p>
+<ul>
+<li>速度命令（cmd_vel）</li>
+<li>配置参数</li>
+<li>传感器数据</li>
+</ul>
+</li>
+<li><p>发布：</p>
+<ul>
+<li>里程计信息</li>
+<li>传感器数据</li>
+<li>机器人状态</li>
+<li>诊断信息</li>
+</ul>
+</li>
+</ol>
+<p> ► 这个节点是<b>整个 TurtleBot3 系统的核心</b>，它负责：</p>
+<ul>
+<li>与硬件层的通信</li>
+<li>运动控制</li>
+<li>传感器数据处理</li>
+<li>状态管理</li>
+<li>提供上层应用所需的各种接口</li>
+</ul>
+<p> ► 通过这个节点，上层应用可以方便地控制机器人，获取传感器数据，实现各种功能。<b>它是连接硬件和上层应用的桥梁，是整个系统的基础。</b><br> </details><br> <br></p>
+</li>
+<li><p><code>turtlebot3_teleop</code>：远程遥控功能包，用于手动控制机器人</p>
+</li>
+<li><p><code>turtlebot3_navigation2</code>：导航功能包，实现自主导航功能</p>
+ <details> 
+ <summary>关于 <b> turtlebot3_cartographer、turtlebot3_navigation2 </b> 包，后面单开专题，写 <b> SLAM & 导航 </b> 相关的部分 ( <b>原理帖</b> 比较合适)。</summary>
+ <br>
+ 
+<p> 这个包是基于 ROS2 的 Navigation2 框架实现的，它提供了：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 完整的导航功能</span><br><span class="line">2. 灵活的配置选项</span><br><span class="line">3. 可靠的行为控制</span><br><span class="line">4. 实时的路径规划</span><br><span class="line">5. 精确的定位能力</span><br></pre></td></tr></table></figure>
+<p> 使用这个包需要理解：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. Navigation2 框架</span><br><span class="line">2. 路径规划算法</span><br><span class="line">3. 定位算法</span><br><span class="line">4. 控制理论</span><br><span class="line">5. 传感器数据处理</span><br><span class="line">6. 行为树设计</span><br><span class="line">7. 参数调优</span><br></pre></td></tr></table></figure>
+<p> 这个包是 TurtleBot3 实现自主导航的核心组件，它能够：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">► 在已知环境中自主导航</span><br><span class="line">► 避开动态障碍物 </span><br><span class="line">(重点标记，也是重点挖掘部分，但我要设计个反的，因为你逃它追，你插翅难飞.</span><br><span class="line">对了，说到飞，画个飞行器后视图吧.o0O0o。)</span><br><span class="line">► 实现精确的位姿控制</span><br><span class="line">► 提供实时的导航状态反馈</span><br></pre></td></tr></table></figure>
+ </details> 
+ <br>
+</li>
+<li><p><code>turtlebot3_description</code>：机器人的 URDF 描述文件，定义机器人的物理特性和结构</p>
+ <details> 
+ <summary>点击这里查看 <i><b>turtlebot3_description</b></i> 详细信息</summary>
+ 
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">► 主要功能：</span><br><span class="line"></span><br><span class="line">    1. 提供机器人的物理描述：</span><br><span class="line">        - 几何形状</span><br><span class="line">        - 质量属性</span><br><span class="line">        - 关节定义</span><br><span class="line">        - 传感器位置</span><br><span class="line"></span><br><span class="line">    2. 支持三种型号：</span><br><span class="line">        - Burger：基础型号</span><br><span class="line">        - Waffle：标准型号</span><br><span class="line">        - Waffle Pi：带树莓派相机的型号</span><br><span class="line"></span><br><span class="line">    3. 可视化支持：</span><br><span class="line">        - 提供 3D 模型</span><br><span class="line">        - RViz 配置文件</span><br><span class="line">        - 材质和颜色定义</span><br><span class="line"></span><br><span class="line">    4. 仿真支持：</span><br><span class="line">        - 碰撞检测模型</span><br><span class="line">        - 惯性参数</span><br><span class="line">        - 运动学描述</span><br></pre></td></tr></table></figure>
+<p> 这个包是 TurtleBot3 的基础描述包，它定义了机器人的物理特性，但 <strong>不包含</strong>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">► 控制逻辑        </span><br><span class="line">► 传感器驱动</span><br><span class="line">► 导航功能</span><br><span class="line">► 机械臂描述 </span><br><span class="line">P.S, 关于 turtlebot3_manipulation 包，后面单开一篇，manipulation相关的部分，关系着机器人bf帮我拧瓶盖的美好幻觉（大雾</span><br><span class="line"></span><br><span class="line">这些功能都在 ► 其他专门的包 中实现。</span><br></pre></td></tr></table></figure>
+ </details> 
+ <br>
+</li>
+<li><p><code>turtlebot3_bringup</code>：启动配置包，用于启动机器人的基本功能</p>
+</li>
+<li><p><code>turtlebot3_cartographer</code>：集成 Google Cartographer 的 SLAM（同时定位与地图构建）功能</p>
+ <details> 
+ <summary>点击这里查看 <i><b>turtlebot3_cartographer</b></i> 详细信息</summary>
+ <i><b>turtlebot3_cartographer</b></i> 包中包含了以下 <i><b>SLAM（Simultaneous Localization and Mapping，同时定位与地图构建）</b></i> 相关的知识，它能够：
+
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 实时构建环境地图</span><br><span class="line">2. 精确定位机器人位置</span><br><span class="line">3. 优化轨迹和位姿</span><br><span class="line">4. 处理传感器数据</span><br><span class="line">5. 提供实时地图更新</span><br></pre></td></tr></table></figure>
+<p> 这个包是基于 Google 的 Cartographer 算法实现的，它 <b>特别适合</b>：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 室内环境建图</span><br><span class="line">- 实时定位</span><br><span class="line">- 大规模环境建图</span><br><span class="line">- 多传感器融合</span><br></pre></td></tr></table></figure>
+<p> 使用这个包需要理解：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. SLAM 基本原理</span><br><span class="line">2. 传感器数据处理</span><br><span class="line">3. 坐标系转换</span><br><span class="line">4. 位姿图优化</span><br><span class="line">5. 实时系统设计</span><br></pre></td></tr></table></figure>
+<p> P.S, 关于 <b>turtlebot3_cartographer、turtlebot3_navigation2 </b> 包，后面单开专题，写 <b>SLAM &amp; 导航</b> 相关的部分。</p>
+ </details></li>
+</ol>
+<h3 id="主要特点："><a href="#主要特点：" class="headerlink" title="主要特点："></a>主要特点：</h3><ol>
+<li>支持多个 ROS 版本分支：noetic（ROS1）、humble、jazzy 和 rolling（ROS2）</li>
+<li>提供完整的硬件驱动支持（如 DYNAMIXEL SDK、LDS 激光雷达驱动等）</li>
+<li>包含丰富的应用示例和扩展功能（如自动驾驶、机械臂操作、机器学习等）</li>
+<li>提供完整的文档支持和社区资源<br></li>
+</ol>
+<p><em>► 这个项目是一个非常完整的机器人平台，不仅提供了基础的移动机器人功能，还包括了大量的扩展应用，使其成为一个理想的教育和研究平台。每个功能包都有其特定的作用，共同构成了一个完整的机器人系统。</em></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/tech-notes/" rel="tag"># tech_notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/03/20/deepseek-api-analysis/" rel="prev" title="DeepSeek的API服务和官网返回结果的差异分析">
+                  <i class="fa fa-angle-left"></i> DeepSeek的API服务和官网返回结果的差异分析
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/01/18/cluster-planning-scheme/" rel="next" title="集群规划方案 (Cluster Planning Scheme)">
+                  集群规划方案 (Cluster Planning Scheme) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Nicole</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"nicolezkx1025","repo":"nicolezkx1025.github.io","client_id":"Ov23ctP4pxy8WwWFPWKk","client_secret":"6ba766934ca018b2267b91ec34efa1c75f9c2e91","admin_user":"nicolezkx1025","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0f6c3e0c22eaba4c6dac3d7036193949"}</script>
+<script src="/js/third-party/comments/gitalk.js" defer></script>
+
+    <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+  <div id="spotify-player" style="position: fixed; left: 20px; bottom: 20px; z-index: 999999;">
+  </div>
+  <script src="/js/spotify-player.js?v=20260913d" defer></script>
+</body>
+</html>

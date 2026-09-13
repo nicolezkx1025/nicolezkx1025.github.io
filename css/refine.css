@@ -1,0 +1,292 @@
+/* ==========================================================================
+   refine.css —— 排版精修（本地测试版 · 未部署）  v2
+   --------------------------------------------------------------------------
+   注入方式：每页 </head> 前一行
+       <link rel="stylesheet" href="/css/refine.css">
+   回退方式：删掉上面那行 + 删掉本文件，页面立刻回到原样
+
+   v2 变更（针对"字太浅、卡片太挤"的修正）：
+     · 删除 v1 的 @media (prefers-color-scheme: dark) 色值块。
+       原因：本站背景是全屏固定 light 照片（body background-image），
+       深色模式的深底实际不可见；v1 把正文刷成 #d8d8d8 后，
+       浅灰字压在亮照片上，导致"字变浅、看不见"。
+     · 全站文字改为更深的近黑色（正文 #1a1a1a、标题 #111）。
+     · .post-block 补 padding（原 main.css 无任何 .post-block padding 规则，
+       卡片文字是贴着边缘的）。
+     · 首页第一条文章的日期/标题增加上间距，给卡片下方留呼吸感。
+   ========================================================================== */
+
+/* ---------- 1. 标题：常规字重（秀气）+ 近黑色（突出） --------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400 !important;
+  letter-spacing: .015em;
+  color: #111 !important;
+}
+.post-title { letter-spacing: .012em; color: #111 !important; }
+
+/* ---------- 2. 卡片留白：全站 .post-block 补内边距 ------------------------ */
+/* main.css 里没有任何 .post-block padding 规则，所以卡片文字是贴边的 */
+.post-block { padding: 22px 26px; }
+
+/* ---------- 3. 正文：近黑色 + 两端对齐 + 行距放宽 ------------------------- */
+.post-body {
+  font-size: 15px;
+  line-height: 1.95;
+  color: #1a1a1a;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  letter-spacing: .006em;
+}
+.post-body p { margin: 15px 0; }
+
+/* 章节标题 */
+.post-body h2 {
+  font-size: 1.15em;
+  margin: 38px 0 14px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.post-body h3 {
+  font-size: 1.02em;
+  color: #111 !important;
+  margin: 26px 0 8px;
+  letter-spacing: .02em;
+}
+
+/* 引用：去底色，细左边线 */
+.post-body blockquote {
+  background: transparent;
+  border-left: 2px solid #dcdcdc;
+  color: #333;
+  font-size: .96em;
+  margin: 18px 0;
+  padding: 2px 0 2px 16px;
+}
+
+/* 列表 */
+.post-body li { margin: 7px 0; }
+.post-body ul, .post-body ol { padding-left: 22px; }
+
+/* 等宽与代码 */
+.post-body code {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: .92em;
+}
+.post-body pre, .post-body .highlight { border-radius: 6px; }
+
+/* 链接：深色 + 细下划线 */
+.post-body a { color: #111; border-bottom: 1px solid #c9c9c9; }
+.post-body a:hover { color: #000; border-bottom-color: #555; }
+
+/* 表格：浅色系写死，不受系统深色模式影响（本站可见界面始终是浅色照片底） */
+.tbl {
+  margin: 22px 0;
+  border: 1px solid #ece9f7;
+  border-radius: 10px;
+  overflow: hidden;          /* 让圆角真正裁切到表格角落 */
+  background: #fff;
+}
+.post-body .tbl table {
+  margin: 0;
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+  font-size: .92em;
+  line-height: 1.75;
+  background: #fff;
+}
+.post-body .tbl th {
+  background: #f4f1fd;
+  color: #241f38;
+  font-weight: 400;
+  letter-spacing: .02em;
+  text-align: left;
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #e2dcf5;
+}
+.post-body .tbl td {
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #f1eef9;
+  color: #1f1f1f;
+  vertical-align: top;
+}
+/* 覆盖主题的深色斑马纹变量，任何系统主题下都保持浅色 */
+.post-body .tbl tbody tr:nth-of-type(odd) { background: #fff; }
+.post-body .tbl tbody tr:nth-of-type(even) { background: #fbfaff; }
+.post-body .tbl tbody tr:hover { background: #f7f4fe; }
+.post-body .tbl tbody tr:last-child td { border-bottom: 0; }
+.post-body .tbl td:first-child { color: #241f38; }
+.post-body .tbl td strong { color: #111; }
+/* 兜底：万一某处表格没被 .tbl 包住，也不要出现深色行 */
+.post-body table { background: #fff; }
+.post-body tbody tr:nth-of-type(odd),
+.post-body tbody tr:nth-of-type(even) { background: #fff; }
+.post-body th { background: #f4f1fd; color: #241f38; font-weight: 400; }
+.post-body th, .post-body td { border: 0; border-bottom: 1px solid #f1eef9; padding: 10px 13px; }
+@media (max-width: 767px) {
+  .post-body .tbl { border-radius: 8px; }
+  .post-body .tbl th, .post-body .tbl td { padding: 9px 10px; font-size: .95em; }
+}
+
+
+/* ---------- 4. 元信息：等宽、字距、字色回到 #666（原站值） ---------------- */
+.post-meta, .post-meta a {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace !important;
+  font-size: 11.5px !important;
+  letter-spacing: .06em;
+  color: #666 !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- 5. 首页文章列表：日期行在标题上方 + 留呼吸感 + 细线分隔 -------
+   只作用于首页（.index.posts-expand）。文章详情页同样是 .posts-expand，
+   刻意不纳入，避免把正文页的 H1 缩小、日期也挪到标题之上。 */
+.index.posts-expand .post-header { display: flex; flex-direction: column; }
+.index.posts-expand .post-meta-container { order: -1; }
+.index.posts-expand .post-meta { text-transform: uppercase; letter-spacing: .07em; }
+.index.posts-expand .post-title { font-size: 1.24em !important; margin: 5px 0 10px !important; }
+.index.posts-expand .post-title-link { border-bottom: 0; }
+/* 首页文章块（排除三张入口卡）：上方留白，日期与标题不再贴着上面的卡片 */
+.index.posts-expand .post-block:not(.focus-card):not(.site-intro):not(.resume-hero) {
+  padding-top: 26px;
+}
+/* 分隔线由 60px 短横改为整幅细线 */
+.index.posts-expand .post-eof { width: 100%; height: 1px; background: #e2e2e2; margin: 28px 0 0; }
+
+/* ---------- 6. 首页「关注的问题」卡片（浅紫，文字加深） ------------------- */
+.focus-card {
+  background: linear-gradient(135deg, #f7f5ff, #fbf9ff);
+  border: 1px solid #e0d9fb;
+  border-radius: 12px;
+}
+.focus-card .post-title { margin: 0 0 6px; }
+.focus-card .fc-flag {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: #7a6ba8;
+  text-transform: uppercase;
+  margin-left: 9px;
+  font-weight: 400;
+}
+.focus-card .fc-lead { font-size: 14.5px; color: #241f38; margin: 2px 0 15px; }
+.focus-card .fc-lead em { font-style: normal; border-bottom: 1px solid #cfc3f2; }
+.focus-card .fc-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 0 18px;
+  padding: 12px 0 12px 15px;
+  border-left: 2px solid #ddd4f7;
+  border-top: 1px solid #e7e1f8;
+  color: #1f1f1f;
+}
+.focus-card .fc-row:first-of-type { border-top: 0; }
+.focus-card .fc-lead-col {
+  font-weight: 400;
+  color: #111 !important;
+  letter-spacing: .02em;
+  line-height: 1.9;
+}
+.focus-card .fc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.focus-card .fc-chip {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 11px;
+  line-height: 1.75;
+  letter-spacing: .02em;
+  background: #ece5fc;
+  color: #443a6b;
+  border-radius: 4px;
+  padding: 1px 7px;
+  white-space: nowrap;
+}
+.focus-card .fc-facts {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #e7e1f8;
+  font-size: 12.5px;
+  color: #3d3852;
+  line-height: 1.9;
+}
+.focus-card .fc-mono {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 11.5px;
+  color: #4d4763;
+}
+.focus-card .fc-entries { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+.focus-card .fc-entries a {
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: .02em;
+  border: 1px solid #ddd4f7;
+  border-radius: 8px;
+  padding: 6px 14px;
+  background: #f2ecfd;
+  color: #33285e;
+}
+.focus-card .fc-entries a:hover { background: #eae1fc; border-bottom-color: #c9bcf0; }
+@media (max-width: 767px) {
+  .focus-card .fc-row { grid-template-columns: 1fr; gap: 3px; }
+}
+
+/* ---------- 7. /research/ 页标题右侧的小入口 ----------------------------- */
+.post-header .rs-more {
+  float: right;
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: #666;
+  line-height: 2.4;
+  white-space: nowrap;
+}
+.post-header .rs-more a { color: #333; border-bottom: 1px solid #ccc; }
+
+/* ---------- 8. 文章内的「邮件索取」闸门（核心章节加密） ------------------- */
+.gate-box {
+  background: #faf9ff;
+  border: 1px solid #e6e1f8;
+  border-left: 3px solid #cbbff0;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin: 26px 0;
+}
+.gate-box .gate-tag {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: #7a6ba8;
+  text-transform: uppercase;
+}
+.gate-box h3 { margin: 10px 0 10px !important; font-size: 1.02em; }
+.gate-box p { margin: 10px 0; color: #1f1f1f; }
+.gate-box ul { margin: 10px 0; padding-left: 22px; }
+.gate-box li { margin: 7px 0; color: #1f1f1f; }
+.gate-form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.gate-form input {
+  font-family: 'Roboto Mono', Consolas, Menlo, monospace;
+  font-size: 13px;
+  padding: 7px 11px;
+  border: 1px solid #ddd6f3;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+  min-width: 210px;
+}
+.gate-form button {
+  font-family: inherit;
+  font-size: 13px;
+  letter-spacing: .02em;
+  padding: 7px 18px;
+  border: 1px solid #cbbff0;
+  border-radius: 6px;
+  background: #efe9fd;
+  color: #33285e;
+  cursor: pointer;
+}
+.gate-form button:hover { background: #e6dcfc; }
+.gate-msg { font-size: 12.5px; color: #8a2b2b; margin-top: 9px; min-height: 18px; }
+.gate-msg.ok { color: #2f6b3f; }
+.gate-content { margin-top: 4px; }
+

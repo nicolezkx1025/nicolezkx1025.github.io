@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.json","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz的说法。后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语音处理领域腾空出世也有迹可循，Bert被GPT替代，GPT被chatGPT替代。重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」">
+<meta property="og:url" content="http://example.com/2023/02/19/quantum-crypto-moss/index.html">
+<meta property="og:site_name" content="Nicole’s Blog">
+<meta property="og:description" content="起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz的说法。后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语音处理领域腾空出世也有迹可循，Bert被GPT替代，GPT被chatGPT替代。重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球2">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-18T16:12:28.000Z">
+<meta property="article:modified_time" content="2026-01-18T09:17:38.804Z">
+<meta property="article:author" content="Nicole">
+<meta property="article:tag" content="tech_notes">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/02/19/quantum-crypto-moss/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/02/19/quantum-crypto-moss/","path":"2023/02/19/quantum-crypto-moss/","title":"「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」 | Nicole’s Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"3QwzBRtNFuLWLynR",ck:"3QwzBRtNFuLWLynR"})</script>
+
+<!-- refine.css (local test) -->
+<link rel="stylesheet" href="/css/refine.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Nicole’s Blog</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-playlist"><a href="/playlist/" rel="section"><i class="fa fa-music fa-fw"></i>playlist</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-research"><a href="/research/" rel="section"><i class="fa fa-bullseye fa-fw"></i>Focus</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="Searching..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Nicole</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      
+      <span class="links-of-author-item">
+        <a href="mailto:nicolezkx@hotmail.com" title="E-Mail → mailto:nicolezkx@hotmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/19/quantum-crypto-moss/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Nicole">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」 | Nicole’s Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          「 量子破解倒计时：当《流浪地球》MOSS学会暴力穷举时，人类还剩多少安全密码？」
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-02-19 00:12:28" itemprop="dateCreated datePublished" datetime="2023-02-19T00:12:28+08:00">2023-02-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-01-18 17:17:38" itemprop="dateModified" datetime="2026-01-18T17:17:38+08:00">2026-01-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+<p style="text-indent:2em">起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz 的说法。后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语言处理领域腾空出世也有迹可循，Bert 被 GPT 替代，GPT 被 chatGPT 替代。重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球 2 里的核密码破解的困难程度感到好奇。</p>
+<p style="text-indent:2em">电影中使用 550W 超级量子计算机，对剩余核弹的破译时间也还需要 700 多个小时。在流浪地球的世界观框架下，MOSS 同时具有 Evil AIs and Angel AIs，所以这 700 多个小时是那部分 Evil AIs 有意为之，故意拖延时间的。但是这也说明了破译足够有难度的密码也需要大量的时间。</p>
+<p style="text-indent:2em">那么是什么决定了密码的破译难度呢？为了应对目前现代密码学基于经典计算机设计的加密技术在量子计算机面前不适用的威胁，本着一颗好奇心，本系列文章将围绕美国国家标准与技术研究院（NIST）近年来研究的、对那些有潜力成为全世界可以采用的新标准算法进行粗略介绍。</p>
+<p style="text-indent:2em">根据一种来自查理·芒格的思维方式，凡事可以从反教材入手：我们可以先看看那些一开始就败下阵来的算法有什么特点，以及如何避免这样的特点。</p>
+<p style="text-indent:2em">2022 年 7 月 5 日，NIST 公布其后量子密码（PQC）标准化项目第三轮筛选的结果，并公布第四轮候选密钥建立机制的入选算法。虽然 SIKE 因密钥和密文较小具有突出优势，一度以高性价比的可靠表现备受关注，NIST 也将在第四轮继续研究讨论；但在同年 7 月 30 日和 8 月 8 日，SIKE 先后被两次攻击破解：第一次由比利时鲁汶大学（KU Leuven）的 Castryck 与 Decru 给出（以 Magma 实现），第二次由波尔多大学 / INRIA 的 Damien Robert 给出，两者利用的其实是<strong>同一处泄漏</strong>——公钥里附带的挠点（torsion point）信息。</p>
+<p style="text-indent:2em">这其中最令人意想不到的是：SIDH 是最早实用的基于同源的加密协议之一，而 SIKE 是它的实例化。这一算法怎么说也算得上是 21 世纪的年轻新星，在它诞生的 12 年里一直给人留下安全性高、简洁高效的印象，这次却在 1 个月内被攻破两次。事出突然，那么 SIKE 的算法具体是什么？这次的攻击到底使用了什么数学方法？</p>
+
+<h3>SIKE 是什么：一句话与几个定义</h3>
+<p style="text-indent:2em">SIKE 算法全称 Supersingular Isogeny Key Encapsulation，是 SIDH（超奇异同源 Diffie-Hellman 公钥交换协议）的一种实例化。Jao 和 Luca De Feo 在《Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies》<sup>[1]</sup> 中提出，该文收录于《Post-Quantum Cryptography》<sup>[2]</sup>一书（该书由台湾中央研究院的 Bo-Yin Yang 等编著）。</p>
+<p style="text-indent:2em">该方法可以概括为：假设 Alice 和 Bob 两人想要秘密交换信息，但处于一个不安全的环境下。两人可抽象为两张图（graph）上的行走者，各自沿自己的同源（isogeny）路径走一段，最终落到同一个终点。</p>
+
+<h4>SIDH 的四步</h4>
+<ol>
+  <li><strong>Public parameters</strong>：超奇异椭圆曲线 <em>E</em> 定义在 <em>F<sub>p<sup>2</sup></sub></em> 上，<em>p</em> 为素数（这里的域就是有限域 GF）。<br>
+  <em>超奇异椭圆曲线</em>的定义：如果定义在 <em>F<sub>q</sub></em> 上的椭圆曲线 <em>E</em>，其自同态环在 <em>F<sub>q</sub></em> 的代数闭包上不可交换，则称 <em>E</em> 为超奇异椭圆曲线。</li>
+  <li><em>Isogeny（同源）</em>的定义：两条椭圆曲线之间的同态，即把一条曲线上的点映射到另一条曲线上。例如两条定义在 <em>F<sub>q</sub></em> 上的椭圆曲线 <em>E</em><sub>1</sub>、<em>E</em><sub>2</sub>，若映射 φ 满足 φ(<em>P</em><sub>1</sub>) = <em>P</em><sub>2</sub>（其中 <em>P</em><sub>1</sub> ∈ <em>E</em><sub>1</sub>，<em>P</em><sub>2</sub> ∈ <em>E</em><sub>2</sub>），则 φ 就是一个同源。</li>
+  <li>Alice 选取一个核 <em>A</em> ⊂ <em>E</em>(<em>F<sub>p<sup>2</sup></sub></em>)，把 <em>E</em>/<em>A</em> 发给 Bob。</li>
+  <li>Bob 选取一个核 <em>B</em> ⊂ <em>E</em>(<em>F<sub>p<sup>2</sup></sub></em>)，把 <em>E</em>/<em>B</em> 发给 Alice。</li>
+  <li>共享密钥为 <em>E</em>/⟨<em>A</em>, <em>B</em>⟩ = (<em>E</em>/<em>A</em>)/φ<sub><em>A</em></sub>(<em>B</em>) = (<em>E</em>/<em>B</em>)/φ<sub><em>B</em></sub>(<em>A</em>)。其中 ⟨·,·⟩ 表示由两个核生成的子群（即"下确界"式的取小：同时被 <em>A</em> 与 <em>B</em> 约束的那部分结构）。</li>
+</ol>
+
+<h4>SIKE 相对 SIDH 的改动</h4>
+<p style="text-indent:2em">曲线固定为 <em>E</em>: <em>y</em><sup>2</sup> = <em>x</em><sup>3</sup> + 6<em>x</em><sup>2</sup> + <em>x</em>；在此基础上把 SIDH 的密钥交换包装成 KEM（密钥封装机制），从而获得更小的密钥与密文，这也正是它当年在工程上受青睐的原因。</p>
+
+<h3>为什么会在一小时内被破：破口不在"数学难题"，而在公钥多给的那一点信息</h3>
+<p style="text-indent:2em">SIDH / SIKE 的安全性直觉是：从一条曲线出发、沿一条秘密同源路径走到另一条曲线，想反推出这条路径（即私钥）在计算上不可行。问题出在协议为了"可用"而附带的东西——为了让对方能正确算出共享密钥，Alice 和 Bob 的公钥里除了目标曲线 <em>E</em>/<em>A</em>、<em>E</em>/<em>B</em>，还必须附上挠点基的像 φ(<em>P</em>)、φ(<em>Q</em>)。</p>
+<p style="text-indent:2em">这些额外的点像，本意是"辅助信息"，实际上泄露了秘密同源在高维上的结构。Castryck 与 Decru 的切入点是 Kani 定理：借助这些泄漏，可以把一个高维同源问题"粘连—分裂"（glue-and-split）成两个低维同源问题，从而把原本指数级难度的搜索，降约为可计算的问题。公开报道中，针对 SIKEp434 参数集，该攻击在单核较老的 Xeon 上约 1 小时即完成密钥恢复<sup>[3]</sup>。几天后，Damien Robert 给出了更干净的多项式时间表述，同样建立在"挠点信息泄漏"这一事实上<sup>[4]</sup>。</p>
+<p style="text-indent:2em">所以真正的教训并不是"同源密码不安全"，而是：<strong>协议为了可用性而额外暴露的每一点结构，都可能成为攻击面。</strong>安全性不由"核心难题有多难"单独决定，而由整个协议的最弱环节决定。</p>
+
+<h3>这件事对 PQC 意味着什么</h3>
+<p style="text-indent:2em">NIST 在同一天（2022 年 7 月 5 日）选定了首批标准化算法：密钥封装用 CRYSTALS-Kyber，签名用 CRYSTALS-Dilithium、FALCON 与 SPHINCS+；SIKE 作为第四轮的备选 KEM 在 2022 年夏天之后被淘汰。2024 年 8 月，对应的三项标准 FIPS 203（ML-KEM）、FIPS 204（ML-DSA）、FIPS 205（SLH-DSA）正式发布<sup>[5]</sup>。同年稍早，另一名候选 Rainbow 也已被攻破——一年之内两个候选倒下，这本身就是"后量子迁移"必须留出安全边际的理由。</p>
+<p style="text-indent:2em">密码学与别的工程学科最不同的一点是：它不能以"目前还没人攻破"作为安全论证，只能以<strong>最坏情况下的攻击者</strong>为基准。SIKE 的失败恰好说明了这条准则的锋利之处——它并不是因为"太新"而失败，而是因为设计里那一点为了好用而留下的额外结构。</p>
+
+<h3>一点题外话：这和我关心的"可信"有什么关系</h3>
+<p style="text-indent:2em">我后来做状态估计与不确定性量化，越来越觉得这两件事是同一个问题的两种形式：一个系统可靠与否，不只取决于它"难以被攻破／难以被扰动"，也取决于它<strong>在被扰动、被退化、被攻破的时候，是否知道自己已经不可信</strong>。密码学靠严格的数学边界来给出这种自知；工程系统则要靠对不确定性的诚实刻画。前者是证明，后者是度量——但拒答与降级的逻辑是一样的。</p>
+
+<h3>参考文献</h3>
+<ul>
+  <li>[1] D. Jao, L. De Feo. <a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-642-25405-5_2">Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</a>. PQCrypto 2011.</li>
+  <li>[2] D. J. Bernstein, J. Buchmann, E. Dahmen (eds.). <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-642-25405-5">Post-Quantum Cryptography</a>. Springer LNCS, 2009.</li>
+  <li>[3] W. Castryck, T. Decru. <a target="_blank" rel="noopener" href="https://eprint.iacr.org/2022/975">An efficient key recovery attack on SIDH</a>. IACR ePrint 2022/975（2022-07-30）。</li>
+  <li>[4] D. Robert. <a target="_blank" rel="noopener" href="https://eprint.iacr.org/2022/1038">Breaking SIDH in polynomial time</a>. IACR ePrint 2022/1038（2022-08-08）。</li>
+  <li>[5] NIST. <a target="_blank" rel="noopener" href="https://www.nist.gov/pqc-standardization">Post-Quantum Cryptography Standardization</a>（FIPS 203/204/205, 2024-08）。</li>
+</ul>
+      </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/tech-notes/" rel="tag"># tech_notes</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/03/20/deepseek-api-analysis/" rel="next" title="DeepSeek的API服务和官网返回结果的差异分析">
+                  DeepSeek的API服务和官网返回结果的差异分析 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Nicole</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"nicolezkx1025","repo":"nicolezkx1025.github.io","client_id":"Ov23ctP4pxy8WwWFPWKk","client_secret":"6ba766934ca018b2267b91ec34efa1c75f9c2e91","admin_user":"nicolezkx1025","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"body":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0b1abf411fc7458cc0e030ecaf4d2d44"}</script>
+<script src="/js/third-party/comments/gitalk.js" defer></script>
+
+    <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/three-waves.min.js"></script>
+  <div id="spotify-player" style="position: fixed; left: 20px; bottom: 20px; z-index: 999999;">
+  </div>
+  <script src="/js/spotify-player.js?v=20260913d" defer></script>
+</body>
+</html>
