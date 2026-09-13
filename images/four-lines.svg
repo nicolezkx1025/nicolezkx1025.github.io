@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="700" viewBox="0 0 1180 700" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans SC','Microsoft YaHei',sans-serif">
+<rect width="1180" height="700" fill="#ffffff"/>
+<text x="56" y="60" font-size="25" font-weight="700" fill="#151515">四条主线</text>
+<text x="56" y="88" font-size="13.5" fill="#666">AI 算法与系统工程 · 从「做得出来」到「知道什么时候不该信」</text>
+<line x1="56" y1="110" x2="1124" y2="110" stroke="#ececec" stroke-width="1.4"/>
+<rect x="56.0" y="148" width="521.0" height="232" rx="16" fill="#fcfcfd" stroke="#ececf0"/>
+<rect x="56.0" y="148" width="5" height="232" rx="2.5" fill="#c0392b" fill-opacity="0.85"/>
+<text x="86.0" y="196" font-size="27" font-weight="800" fill="#c0392b" fill-opacity="0.85">01</text>
+<circle cx="531.0" cy="190" r="5" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-opacity="0.9"/>
+<circle cx="531.0" cy="190" r="10" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-opacity="0.5"/>
+<circle cx="531.0" cy="190" r="15" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-opacity="0.25"/>
+<circle cx="531.0" cy="190" r="2.6" fill="#c0392b"/>
+<text x="140.0" y="192" font-size="18.5" font-weight="700" fill="#161616">退化条件下的可信度</text>
+<text x="86.0" y="228" font-size="13" fill="#6a6a6a">退化、漂移、越界之后,输出还值不值得信</text>
+<rect x="86" y="264" width="97" height="30" rx="15" fill="#c0392b" fill-opacity="0.085" stroke="#c0392b" stroke-opacity="0.28"/>
+<text x="134" y="284" font-size="12.8" fill="#c0392b" text-anchor="middle" font-weight="600">不确定性量化</text>
+<rect x="195" y="264" width="69" height="30" rx="15" fill="#c0392b" fill-opacity="0.085" stroke="#c0392b" stroke-opacity="0.28"/>
+<text x="229" y="284" font-size="12.8" fill="#c0392b" text-anchor="middle" font-weight="600">失效识别</text>
+<rect x="276" y="264" width="83" height="30" rx="15" fill="#c0392b" fill-opacity="0.085" stroke="#c0392b" stroke-opacity="0.28"/>
+<text x="318" y="284" font-size="12.8" fill="#c0392b" text-anchor="middle" font-weight="600">降级与回滚</text>
+<rect x="603.0" y="148" width="521.0" height="232" rx="16" fill="#fcfcfd" stroke="#ececf0"/>
+<rect x="603.0" y="148" width="5" height="232" rx="2.5" fill="#2f6fb0" fill-opacity="0.85"/>
+<text x="633.0" y="196" font-size="27" font-weight="800" fill="#2f6fb0" fill-opacity="0.85">02</text>
+<path d="M 1065.0 190 a 13 13 0 1 1 5 10" fill="none" stroke="#2f6fb0" stroke-width="2" stroke-linecap="round"/>
+<path d="M 1070.0 200 l 1 6 l -6 -1 z" fill="#2f6fb0"/>
+<text x="687.0" y="192" font-size="18.5" font-weight="700" fill="#161616">从感知到决策的闭环</text>
+<text x="633.0" y="228" font-size="13" fill="#6a6a6a">把估计、自适应与动作接成一条链路</text>
+<rect x="633" y="264" width="69" height="30" rx="15" fill="#2f6fb0" fill-opacity="0.085" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<text x="668" y="284" font-size="12.8" fill="#2f6fb0" text-anchor="middle" font-weight="600">世界模型</text>
+<rect x="714" y="264" width="97" height="30" rx="15" fill="#2f6fb0" fill-opacity="0.085" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<text x="763" y="284" font-size="12.8" fill="#2f6fb0" text-anchor="middle" font-weight="600">持续内部状态</text>
+<rect x="823" y="264" width="83" height="30" rx="15" fill="#2f6fb0" fill-opacity="0.085" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<text x="864" y="284" font-size="12.8" fill="#2f6fb0" text-anchor="middle" font-weight="600">在线自适应</text>
+<rect x="918" y="264" width="83" height="30" rx="15" fill="#2f6fb0" fill-opacity="0.085" stroke="#2f6fb0" stroke-opacity="0.28"/>
+<text x="960" y="284" font-size="12.8" fill="#2f6fb0" text-anchor="middle" font-weight="600">端到端集成</text>
+<rect x="56.0" y="406" width="521.0" height="232" rx="16" fill="#fcfcfd" stroke="#ececf0"/>
+<rect x="56.0" y="406" width="5" height="232" rx="2.5" fill="#2e8b57" fill-opacity="0.85"/>
+<text x="86.0" y="454" font-size="27" font-weight="800" fill="#2e8b57" fill-opacity="0.85">03</text>
+<rect x="517.0" y="434" width="8" height="8" rx="2" fill="none" stroke="#2e8b57" stroke-width="1.8"/>
+<rect x="537.0" y="434" width="8" height="8" rx="2" fill="none" stroke="#2e8b57" stroke-width="1.8"/>
+<rect x="537.0" y="454" width="8" height="8" rx="2" fill="none" stroke="#2e8b57" stroke-width="1.8"/>
+<rect x="517.0" y="454" width="8" height="8" rx="2" fill="none" stroke="#2e8b57" stroke-width="1.8"/>
+<path d="M 525.0 438 H 537.0 M 541.0 442 V 454 M 537.0 458 H 525.0 M 521.0 454 V 442" stroke="#2e8b57" stroke-width="1.4" stroke-opacity="0.55" fill="none"/>
+<text x="140.0" y="450" font-size="18.5" font-weight="700" fill="#161616">智能体的工程闭环</text>
+<text x="86.0" y="486" font-size="13" fill="#6a6a6a">让能力按轮次累积,而不是一次性调参</text>
+<rect x="86" y="522" width="42" height="30" rx="15" fill="#2e8b57" fill-opacity="0.085" stroke="#2e8b57" stroke-opacity="0.28"/>
+<text x="107" y="542" font-size="12.8" fill="#2e8b57" text-anchor="middle" font-weight="600">数据</text>
+<rect x="140" y="522" width="42" height="30" rx="15" fill="#2e8b57" fill-opacity="0.085" stroke="#2e8b57" stroke-opacity="0.28"/>
+<text x="161" y="542" font-size="12.8" fill="#2e8b57" text-anchor="middle" font-weight="600">训练</text>
+<rect x="194" y="522" width="42" height="30" rx="15" fill="#2e8b57" fill-opacity="0.085" stroke="#2e8b57" stroke-opacity="0.28"/>
+<text x="215" y="542" font-size="12.8" fill="#2e8b57" text-anchor="middle" font-weight="600">评测</text>
+<rect x="249" y="522" width="42" height="30" rx="15" fill="#2e8b57" fill-opacity="0.085" stroke="#2e8b57" stroke-opacity="0.28"/>
+<text x="270" y="542" font-size="12.8" fill="#2e8b57" text-anchor="middle" font-weight="600">部署</text>
+<rect x="303" y="522" width="69" height="30" rx="15" fill="#2e8b57" fill-opacity="0.085" stroke="#2e8b57" stroke-opacity="0.28"/>
+<text x="337" y="542" font-size="12.8" fill="#2e8b57" text-anchor="middle" font-weight="600">数据飞轮</text>
+<rect x="603.0" y="406" width="521.0" height="232" rx="16" fill="#fcfcfd" stroke="#ececf0"/>
+<rect x="603.0" y="406" width="5" height="232" rx="2.5" fill="#8e44ad" fill-opacity="0.85"/>
+<text x="633.0" y="454" font-size="27" font-weight="800" fill="#8e44ad" fill-opacity="0.85">04</text>
+<rect x="1065.0" y="438" width="26" height="5" rx="2.5" fill="#8e44ad" fill-opacity="0.9"/>
+<rect x="1065.0" y="446" width="26" height="5" rx="2.5" fill="#8e44ad" fill-opacity="0.65"/>
+<rect x="1065.0" y="454" width="26" height="5" rx="2.5" fill="#8e44ad" fill-opacity="0.4"/>
+<path d="M 1094.0 439 l 8 9 l -8 9" fill="none" stroke="#8e44ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="687.0" y="450" font-size="18.5" font-weight="700" fill="#161616">训练与推理基础设施</text>
+<text x="633.0" y="486" font-size="13" fill="#6a6a6a">很多「模型不行」,其实卡在这一层</text>
+<rect x="633" y="522" width="83" height="30" rx="15" fill="#8e44ad" fill-opacity="0.085" stroke="#8e44ad" stroke-opacity="0.28"/>
+<text x="674" y="542" font-size="12.8" fill="#8e44ad" text-anchor="middle" font-weight="600">分布式训练</text>
+<rect x="728" y="522" width="69" height="30" rx="15" fill="#8e44ad" fill-opacity="0.085" stroke="#8e44ad" stroke-opacity="0.28"/>
+<text x="763" y="542" font-size="12.8" fill="#8e44ad" text-anchor="middle" font-weight="600">推理加速</text>
+<rect x="809" y="522" width="83" height="30" rx="15" fill="#8e44ad" fill-opacity="0.085" stroke="#8e44ad" stroke-opacity="0.28"/>
+<text x="851" y="542" font-size="12.8" fill="#8e44ad" text-anchor="middle" font-weight="600">并发与延迟</text>
+<text x="56" y="672" font-size="12.8" fill="#8a8a8a">这里的每一项都以自建的小型可复现实验呈现:只用 numpy,一条命令跑通,结论与局限都写在 README 里。</text>
+<text x="1124" y="672" font-size="12.8" fill="#b3b3b3" text-anchor="end">github.com/nicolezkx1025</text>
+</svg>
