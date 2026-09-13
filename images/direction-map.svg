@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" font-family="-apple-system,BlinkMacSystemFont,'Noto Sans SC','Microsoft YaHei',sans-serif">
 <rect width="1180" height="820" fill="#ffffff"/>
-<text x="96" y="40" font-size="22" font-weight="700" fill="#1a1a1a">方向地图:我做过什么,在哪里</text>
+<text x="96" y="40" font-size="22" font-weight="700" fill="#1a1a1a">方向地图：我做过什么，在哪里</text>
 <text x="96" y="64" font-size="12.5" fill="#666">横轴 = 可验证性　纵轴 = 与物理世界的耦合　　实心点 = 已有公开可查的产出</text>
-<text x="96" y="90" font-size="13" font-weight="600" fill="#c0392b">主线:低信噪比与退化条件下的可信系统 —— 状态估计 / 不确定性 / 评测闭环,能力可迁移至无人系统与量化研究。</text>
+<text x="96" y="90" font-size="13" font-weight="600" fill="#c0392b">主线：低信噪比与退化条件下的可信系统 —— 状态估计 / 不确定性 / 评测闭环，能力可迁移至无人系统与量化研究。</text>
 <circle cx="231.7" cy="654.1" r="6.5" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
 <text x="241.7" y="646.1" font-size="12.5" font-weight="400" fill="#555" text-anchor="start">搜广推 / 推荐排序</text>
 <circle cx="263.0" cy="697.2" r="5.0" fill="#ffffff" stroke="#2f6fb0" stroke-width="1.6"/>
@@ -55,25 +55,25 @@
 <path d="M 513.6 481.6 Q 539.9 464.8 576.2 272.2" fill="none" stroke="#e8534a" stroke-width="2" stroke-dasharray="7 6" stroke-opacity="0.55"/>
 <line x1="576.2" y1="272.2" x2="579.2" y2="284.8" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
 <line x1="576.2" y1="272.2" x2="568.8" y2="282.8" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
-<text x="552.9" y="368.9" font-size="11.5" fill="#c0392b" font-weight="600">可迁移:状态估计 / 不确定性 / 闭环</text>
+<text x="552.9" y="368.9" font-size="11.5" fill="#c0392b" font-weight="600">可迁移：状态估计 / 不确定性 / 闭环</text>
 <path d="M 513.6 481.6 Q 662.7 494.4 868.6 641.8" fill="none" stroke="#e8534a" stroke-width="2" stroke-dasharray="7 6" stroke-opacity="0.55"/>
 <line x1="868.6" y1="641.8" x2="855.8" y2="639.2" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
 <line x1="868.6" y1="641.8" x2="862.0" y2="630.5" stroke="#e8534a" stroke-width="2" stroke-opacity="0.65"/>
-<text x="699.1" y="553.7" font-size="11.5" fill="#c0392b" font-weight="600">可迁移:低信噪比下的统计判断</text>
+<text x="699.1" y="553.7" font-size="11.5" fill="#c0392b" font-weight="600">可迁移：低信噪比下的统计判断</text>
 <circle cx="513.6" cy="481.6" r="13" fill="#e8534a" fill-opacity="0.16"/>
 <circle cx="513.6" cy="481.6" r="7.5" fill="#e8534a" stroke="#ffffff" stroke-width="2.5"/>
 <text x="529.6" y="485.6" font-size="13.5" font-weight="700" fill="#c0392b">我的重心</text>
 <line x1="96" y1="728" x2="1140" y2="728" stroke="#333" stroke-width="1.4"/>
 <line x1="96" y1="112" x2="96" y2="728" stroke="#333" stroke-width="1.4"/>
-<text x="618" y="762" text-anchor="middle" font-size="12.5" fill="#444">可验证性 →　（左:离线指标清晰　·　右:只能靠真实盈亏/长期结果验证）</text>
-<text x="26" y="420" font-size="12.5" fill="#444" text-anchor="middle" transform="rotate(-90 26 420)">与物理世界的耦合 →　（下:纯数字　·　上:具身/实时系统）</text>
+<text x="618" y="762" text-anchor="middle" font-size="12.5" fill="#444">可验证性 →　（左：离线指标清晰　·　右：只能靠真实盈亏/长期结果验证）</text>
+<text x="26" y="420" font-size="12.5" fill="#444" text-anchor="middle" transform="rotate(-90 26 420)">与物理世界的耦合 →　（下：纯数字　·　上：具身/实时系统）</text>
 <rect x="98" y="642" width="430" height="72" rx="8" fill="#fbfbfb" stroke="#ececec"/>
-<text x="108" y="658" font-size="11.5" fill="#666">圆点 = 该方向;实心+外环 = 已有公开产出　空心粗边 = 有生产经验未公开　空心细边 = 尚未进入　虚线箭头 = 能力可迁移方向</text>
+<text x="108" y="658" font-size="11.5" fill="#666">圆点 = 该方向；实心+外环 = 已有公开产出　空心粗边 = 有生产经验未公开　空心细边 = 尚未进入　虚线箭头 = 能力可迁移方向</text>
 <circle cx="108" cy="682" r="6" fill="#2f6fb0"/>
 <text x="120" y="686" font-size="12" fill="#444">AI·数字</text>
 <circle cx="236" cy="682" r="6" fill="#2e8b57"/>
 <text x="248" y="686" font-size="12" fill="#444">AI·具身</text>
 <circle cx="364" cy="682" r="6" fill="#8e44ad"/>
 <text x="376" y="686" font-size="12" fill="#444">金融</text>
-<text x="1140" y="804" font-size="11" fill="#aaa" text-anchor="end">坐标为定性定位,非定量测量;仅标注已有公开产出的方向</text>
+<text x="1140" y="804" font-size="11" fill="#aaa" text-anchor="end">坐标为定性定位，非定量测量；仅标注已有公开产出的方向</text>
 </svg>

@@ -11,7 +11,7 @@
 <circle cx="531.0" cy="190" r="15" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-opacity="0.25"/>
 <circle cx="531.0" cy="190" r="2.6" fill="#c0392b"/>
 <text x="140.0" y="192" font-size="18.5" font-weight="700" fill="#161616">退化条件下的可信度</text>
-<text x="86.0" y="228" font-size="13" fill="#6a6a6a">退化、漂移、越界之后,输出还值不值得信</text>
+<text x="86.0" y="228" font-size="13" fill="#6a6a6a">退化、漂移、越界之后，输出还值不值得信</text>
 <rect x="86" y="264" width="97" height="30" rx="15" fill="#c0392b" fill-opacity="0.085" stroke="#c0392b" stroke-opacity="0.28"/>
 <text x="134" y="284" font-size="12.8" fill="#c0392b" text-anchor="middle" font-weight="600">不确定性量化</text>
 <rect x="195" y="264" width="69" height="30" rx="15" fill="#c0392b" fill-opacity="0.085" stroke="#c0392b" stroke-opacity="0.28"/>
@@ -42,7 +42,7 @@
 <rect x="517.0" y="454" width="8" height="8" rx="2" fill="none" stroke="#2e8b57" stroke-width="1.8"/>
 <path d="M 525.0 438 H 537.0 M 541.0 442 V 454 M 537.0 458 H 525.0 M 521.0 454 V 442" stroke="#2e8b57" stroke-width="1.4" stroke-opacity="0.55" fill="none"/>
 <text x="140.0" y="450" font-size="18.5" font-weight="700" fill="#161616">智能体的工程闭环</text>
-<text x="86.0" y="486" font-size="13" fill="#6a6a6a">让能力按轮次累积,而不是一次性调参</text>
+<text x="86.0" y="486" font-size="13" fill="#6a6a6a">让能力按轮次累积，而不是一次性调参</text>
 <rect x="86" y="522" width="42" height="30" rx="15" fill="#2e8b57" fill-opacity="0.085" stroke="#2e8b57" stroke-opacity="0.28"/>
 <text x="107" y="542" font-size="12.8" fill="#2e8b57" text-anchor="middle" font-weight="600">数据</text>
 <rect x="140" y="522" width="42" height="30" rx="15" fill="#2e8b57" fill-opacity="0.085" stroke="#2e8b57" stroke-opacity="0.28"/>
@@ -61,13 +61,13 @@
 <rect x="1065.0" y="454" width="26" height="5" rx="2.5" fill="#8e44ad" fill-opacity="0.4"/>
 <path d="M 1094.0 439 l 8 9 l -8 9" fill="none" stroke="#8e44ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="687.0" y="450" font-size="18.5" font-weight="700" fill="#161616">训练与推理基础设施</text>
-<text x="633.0" y="486" font-size="13" fill="#6a6a6a">很多「模型不行」,其实卡在这一层</text>
+<text x="633.0" y="486" font-size="13" fill="#6a6a6a">很多「模型不行」，其实卡在这一层</text>
 <rect x="633" y="522" width="83" height="30" rx="15" fill="#8e44ad" fill-opacity="0.085" stroke="#8e44ad" stroke-opacity="0.28"/>
 <text x="674" y="542" font-size="12.8" fill="#8e44ad" text-anchor="middle" font-weight="600">分布式训练</text>
 <rect x="728" y="522" width="69" height="30" rx="15" fill="#8e44ad" fill-opacity="0.085" stroke="#8e44ad" stroke-opacity="0.28"/>
 <text x="763" y="542" font-size="12.8" fill="#8e44ad" text-anchor="middle" font-weight="600">推理加速</text>
 <rect x="809" y="522" width="83" height="30" rx="15" fill="#8e44ad" fill-opacity="0.085" stroke="#8e44ad" stroke-opacity="0.28"/>
 <text x="851" y="542" font-size="12.8" fill="#8e44ad" text-anchor="middle" font-weight="600">并发与延迟</text>
-<text x="56" y="672" font-size="12.8" fill="#8a8a8a">这里的每一项都以自建的小型可复现实验呈现:只用 numpy,一条命令跑通,结论与局限都写在 README 里。</text>
+<text x="56" y="672" font-size="12.8" fill="#8a8a8a">这里的每一项都以自建的小型可复现实验呈现：只用 numpy，一条命令跑通，结论与局限都写在 README 里。</text>
 <text x="1124" y="672" font-size="12.8" fill="#b3b3b3" text-anchor="end">github.com/nicolezkx1025</text>
 </svg>
