@@ -221,8 +221,63 @@
       
       
       <div class="post-body">
-          
-      </div>
+<style>
+.nzk-note{background:#f7f9fc;border-left:3px solid #8ab4d8;padding:10px 14px;margin:18px 0;color:#42566b;font-size:.94em}
+.nzk-chips{margin:14px 0 22px;line-height:2.4}
+.nzk-chip{display:inline-block;padding:3px 12px;margin:0 8px 8px 0;border:1px solid #d5dfe9;border-radius:999px;
+  font-size:.9em;color:#3d566e;background:#fafcfe;text-decoration:none;transition:.18s}
+.nzk-chip:hover{background:#eef5fb;border-color:#a9c6df;color:#1f4e79}
+.nzk-tag-block{margin:0 0 26px}
+.nzk-tag-block h3{margin:0 0 6px;font-size:1.02em}
+.nzk-count{color:#8a9bab;font-weight:400;font-size:.88em}
+.nzk-list{margin:6px 0 0;padding-left:1.2em}
+.nzk-list li{margin:3px 0}
+.nzk-date{color:#9aa8b5;font-size:.86em;margin-right:8px;font-variant-numeric:tabular-nums}
+.nzk-player{max-width:100%;margin:16px 0;border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(30,60,90,.12)}
+.nzk-player iframe{display:block;width:100%;border:0}
+.nzk-table{width:100%;font-size:.94em}
+.nzk-table td{padding:7px 6px;border-bottom:1px solid #eef2f6;vertical-align:top}
+.nzk-table td:first-child{white-space:nowrap}
+</style>
+<h2>我在做什么</h2>
+<p>做 AI 算法与系统工程。所有工作背后其实是同一个问题:</p>
+<div class="nzk-note"><strong>系统如何知道自己什么时候不可信,并据此降级、保守化或拒答。</strong></div>
+<p>它展开成四条主线:</p>
+<ul>
+<li><strong>退化条件下的可信度</strong> —— 不确定性量化 / 失效识别 / 降级与回滚</li>
+<li><strong>从感知到决策的闭环</strong> —— 状态估计 / 持续内部状态 / 在线自适应</li>
+<li><strong>智能体的工程闭环</strong> —— 数据 / 训练 / 评测 / 部署 / 数据飞轮</li>
+<li><strong>训练与推理基础设施</strong> —— 分布式训练 / 推理加速 / 并发与延迟</li>
+</ul>
+
+<h2>技术主线怎么长出来的</h2>
+<p>算法竞赛与数学 → 深度学习与计算机视觉 → 大数据与 NLP → 大模型、Agent 与可信 AI。
+这条线不是刻意规划的,是每一次「选择留下来」的结果。回头看去,早期那些看起来和 AI 无关的积累
+(动态规划、概率统计、图论)后来都变成了地基。</p>
+<p>如果只能留一句话,是这句:<strong>在真实业务里,模型的「可信」比「聪明」更重要。</strong></p>
+
+<h2>公开产出</h2>
+<p>下面几个自建的小型可复现实验,都是能跑、能查、能被反驳的:</p>
+<table class="nzk-table"><tr><td><a href="https://github.com/nicolezkx1025/uq-state-estimation" target="_blank" rel="noopener">uq-state-estimation</a></td><td>传感器退化下,状态估计的不确定性还可不可信<br><span class="nzk-date">正常条件下两个滤波器无法区分;退化时朴素滤波器声称 95% 置信区间、实际只兑现 34.7%</span></td></tr><tr><td><a href="https://github.com/nicolezkx1025/table-structure-gnn" target="_blank" rel="noopener">table-structure-gnn</a></td><td>无边框复杂表格的行列结构与合并表头复原<br><span class="nzk-date">边级准确率 99.1% 时结构 F1 只有 0.551;一致性后处理把列分组 F1 提到 0.695</span></td></tr><tr><td><a href="https://github.com/nicolezkx1025/rag-eval-abstention" target="_blank" rel="noopener">rag-eval-abstention</a></td><td>让 RAG 学会说「我不知道」<br><span class="nzk-date">拒答 18% 的查询后,精确率 0.633 → 0.755,幻觉率 0.367 → 0.200</span></td></tr><tr><td><a href="https://github.com/nicolezkx1025/floorplan-parsing" target="_blank" rel="noopener">floorplan-parsing</a></td><td>户型图结构化解析(2018–19 方向的复现)<br><span class="nzk-date">规则法平均 IoU 0.465 / 门 F1 0.06;逐像素学习法 0.804 / 0.47</span></td></tr><tr><td><a href="https://github.com/nicolezkx1025/reading-log" target="_blank" rel="noopener">reading-log</a></td><td>学习日志:读了什么、搞懂了什么、还没搞懂什么<br><span class="nzk-date">索引由脚本自动生成,重点是「还没搞懂」的部分</span></td></tr></table>
+<p>完整仓库列表见 <a href="https://github.com/nicolezkx1025" target="_blank" rel="noopener">GitHub</a>;
+研究与方向上的想法整理在 <a href="/research/">研究兴趣</a> 页。</p>
+
+<h2>本站放什么</h2>
+<ul>
+<li><strong>研究笔记</strong> —— 把读到的、想到的写成能被反驳的东西</li>
+<li><strong>技术复盘</strong> —— 做过的项目里,哪些判断错了、为什么错</li>
+<li><strong>学习日志</strong> —— 重点是「还没搞懂」的部分,而不是「已掌握」</li>
+</ul>
+
+<h2>联系</h2>
+<ul>
+<li>邮箱:<a href="mailto:kzhangas@connect.ust.hk">kzhangas@connect.ust.hk</a></li>
+<li>GitHub:<a href="https://github.com/nicolezkx1025" target="_blank" rel="noopener">@nicolezkx1025</a></li>
+<li>简历:<a href="/resume/">resume</a> · 研究方向:<a href="/research/">research</a></li>
+</ul>
+<p class="nzk-note">欢迎研究合作、技术合作与职位机会。</p>
+
+</div>
       
       
       
@@ -277,6 +332,6 @@
     <script defer src="/lib/three/three-waves.min.js"></script>
   <div id="spotify-player" style="position: fixed; left: 20px; bottom: 20px; z-index: 999999;">
   </div>
-  <script src="/js/spotify-player.js?v=20260913d" defer></script>
+  <script src="/js/spotify-player.js?v=20260913d" defer></script><script src="/js/pjax-lite.js?v=20260914b" defer></script>
 </body>
 </html>
